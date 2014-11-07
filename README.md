@@ -1,5 +1,5 @@
-[mac-os-x-notes](https://github.com/neurite/mac-os-x-notes/wiki/The-Notes)
-================
+mac-os-x-notes
+==============
 
 ### Mac OS X Mavericks
 
