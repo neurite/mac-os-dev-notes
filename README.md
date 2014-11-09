@@ -90,3 +90,13 @@ mac-os-x-notes
     10. `pip3 install sympy`
 
 ### Java JDK 7
+
+### `~/.bash_profile`
+
+Besides the lines added by Python, add the following at the beginning:
+
+    ```
+    source ~/.profile
+    # Make sure /usr/local/bin is before /usr/bin
+    PATH="/usr/local/bin:${PATH}"
+    ```
