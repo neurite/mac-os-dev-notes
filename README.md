@@ -23,6 +23,7 @@ mac-os-x-notes
 1. Cousine, Droid Sans, Droid Sans Mono from Font Squirrel
 2. Create `~/.vimrc` and add the configuration
 
+    ```
     syntax on
     set background=dark
     filetype plugin indent on
@@ -36,6 +37,7 @@ mac-os-x-notes
     set mouse=a
     set number
     set ruler
+    ```
 
 ### Python
 
@@ -92,7 +94,6 @@ mac-os-x-notes
 ### .bash_profile
 
 This edits `~/.bash_profile`. Besides the lines added by Python, add the following at the beginning:
-
 
     source ~/.profile
     
