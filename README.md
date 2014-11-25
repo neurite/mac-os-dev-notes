@@ -89,6 +89,23 @@ mac-os-x-notes
     9. `pip3 install pandas`
     10. `pip3 install sympy`
 
+#### AWS Environment (`aws-cli`)
+
+1. `pip3 install awscli`
+2. Create `~/.aws/config` and make sure only the user has the access. Add the following:
+
+    ```
+    [default]
+    region=us-east-1
+    aws_access_key_id=<your_aws_access_key_id>
+    aws_secret_access_key=<your_aws_secret_access_key>
+    
+    [profile dev]
+    region=us-west-2
+    aws_access_key_id=<your_aws_access_key_id>
+    aws_secret_access_key=<your_aws_secret_access_key>
+    ```
+
 ### Java JDK 7
 
 ### .bash_profile
