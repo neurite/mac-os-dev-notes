@@ -57,7 +57,7 @@ mac-os-x-notes
         2. `sudo pip freeze`
         3. `sudo pip install -U <pkg>`
 5. virtualenv (Python 2 only)
-    1. Note `pyvenv` comes with Python 3. The steps below are for Python 2
+    1. Note `pyenv` comes with Python 3. The steps below are for Python 2
     2. `sudo pip install virtualenv`
     3. In the directory `~/Applications`:
         1. `virtualenv <env-name>`
