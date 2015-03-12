@@ -41,9 +41,9 @@ mac-os-x-notes
 
 ### Python
 
-1. ActiveTcl 8.5.16.0
-2. Python 2.7.8
-3. Python 3.4.2
+1. ActiveTcl 8.5.17.0 (See [IDLE and tkinter with Tcl/Tk on Mac OS X](https://www.python.org/download/mac/tcltk/))
+2. Python 2.7.9 or the latest
+3. Python 3.4.3 or the latest
 4. pip (Python 2 only)
     1. Note `pip3` comes with Python 3. The steps below are for Python 2
     2. `curl -O https://bootstrap.pypa.io/get-pip.py`
