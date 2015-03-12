@@ -71,23 +71,28 @@ mac-os-x-notes
     2. `virtualenv data-analysis`
     3. `cd data-analysis`
     4. `source bin/activate`
-    5. `pip install numpy`
-    6. `pip install scipy`
-    7. `pip install matplotlib`
-    8. `pip install ipython[all]`
-    9. `pip install pandas`
-    10. `pip install sympy`
+    5. `pip install --upgrade pip`
+    6. `pip freeze` # then upgrade individual packages
+    7. `pip install numpy`
+    8. `pip install scipy`
+    9. `pip install matplotlib`
+    10. `pip install ipython[all]`
+    11. `pip install pandas`
+    12. `pip install sympy`
 2. `data-analysis-3`
     1. `cd ~/Applications`
     2. `pyvenv data-analysis-3`
     3. `cd data-analysis-3`
     4. `source bin/activate`
-    5. `pip3 install numpy`
-    6. `pip3 install scipy`
-    7. `pip3 install matplotlib`
-    8. `pip3 install ipython[all]`
-    9. `pip3 install pandas`
-    10. `pip3 install sympy`
+    5. Note at this point, `pip` and `pip3` point to the same binary. We prefere `pip`
+    6. `pip install --upgrade pip`
+    7. `pip freeze` # then upgrade individual packages
+    8. `pip install numpy`
+    9. `pip install scipy`
+    10. `pip install matplotlib`
+    11. `pip install ipython[all]`
+    12. `pip install pandas`
+    13. `pip install sympy`
 
 #### AWS Environment (`aws-cli`)
 
