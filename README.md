@@ -23,7 +23,7 @@ mac-os-x-notes
 1. Cousine, Droid Sans, Droid Sans Mono from Font Squirrel
 2. Create `~/.vimrc` and add the configuration
 
-    ```
+    ```bash
     syntax on
     set background=dark
     filetype plugin indent on
@@ -37,6 +37,9 @@ mac-os-x-notes
     set mouse=a
     set number
     set ruler
+    set tabstop=4
+    set shiftwidth=4
+    set expandtab
     ```
 
 ### Python
