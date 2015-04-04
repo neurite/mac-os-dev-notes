@@ -120,9 +120,11 @@ mac-os-x-notes
 
 This edits `~/.bash_profile`. Besides the lines added by Python, add the following at the beginning:
 
+```bash
     if [ -r "${HOME}/.profile" ]; then
         source "${HOME}/.profile"
     fi
     
     # Make sure /usr/local/bin is before /usr/bin
-    export PATH="/usr/local/bin:${PATH}"
+    PATH="/usr/local/bin:${PATH}"
+```
