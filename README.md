@@ -84,7 +84,7 @@ mac-os-x-notes
     12. `pip install sympy`
 2. `data-analysis-3`
     1. `cd ~/Applications`
-    2. `pyvenv data-analysis-3`
+    2. `pyenv data-analysis-3`
     3. `cd data-analysis-3`
     4. `source bin/activate`
     5. Note at this point, `pip` and `pip3` point to the same binary. We prefere `pip`
