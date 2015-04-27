@@ -87,7 +87,7 @@ mac-os-x-notes
     2. `pyenv data-analysis-3`
     3. `cd data-analysis-3`
     4. `source bin/activate`
-    5. Note at this point, `pip` and `pip3` point to the same binary. Can be verified via `pip --version` and `pip3 --version`. We prefere `pip`
+    5. Note at this point, `pip` and `pip3` point to the same binary. Can be verified by comparing `pip --version` and `pip3 --version`. We prefere `pip`
     6. `pip install --upgrade pip`
     7. `pip freeze` # then upgrade individual packages
     8. `pip install numpy`
