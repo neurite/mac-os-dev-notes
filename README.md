@@ -66,6 +66,11 @@ mac-os-x-notes
         1. `virtualenv <env-name>`
         2. `source <env>/bin/activate`
         3. Then can go anywhere and do work. When done, `deactivate`
+6. IPython
+    1. Make sure Python 3 is installed `which python3` and `which pip3`
+    2. Update existing pip packages `sudo pip3 list` then for each package `sudo pip3 install --upgrade <package>`
+    3. Install `sudo pip3 install jupyter`
+    4. Verify `which ipython` and `which jupyter`
 
 ### Data Analysis Environment
 
