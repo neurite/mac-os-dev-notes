@@ -1,22 +1,26 @@
 mac-os-x-notes
 ==============
 
-### Mac OS X Mavericks
+### Mac OS X El Capitan
 
-1. `Command + R`, then power on
-2. Disk Utility. Mac OS Extended, Journaled
-3. Install the OS
-4. Software updates
-5. Customize
-    1. Touch pad
-    2. Wall paper
-    3. Dock
-    4. Finder
+1. Prepare [a bootable USB disk of El Capitan](https://www.google.com/search?q=bootable+USB+El+Capitan).
+2. Hold down the Option key when booting up.
+3. Format as `Mac OS Extended, Journaled`.
+4. Install the OS and then update.
+5. Customize:
+    1. System Preferences... --> Tackpad
+    2. System Preferences... --> Desktop
+    3. System Preferences... --> Dock
+    4. Finder --> Preferences...
     5. Safari
-6. Firefox
-7. Xcode Command-Line Tools
-8. VirtualBox
-9. Vagrant
+6. Install:
+    1. Xcode Command-Line Tools
+    2. VirtualBox
+    3. Vagrant
+    4. Docker Custom Install
+        1. Docker Client
+        2. Docker Machine
+        3. Docker Compose
 
 ### Terminal
 
@@ -44,9 +48,9 @@ mac-os-x-notes
 
 ### Python
 
-1. ActiveTcl 8.5.17.0 (See [IDLE and tkinter with Tcl/Tk on Mac OS X](https://www.python.org/download/mac/tcltk/))
-2. Python 2.7.9 or the latest
-3. Python 3.4.3 or the latest
+1. ActiveTcl 8.5.18.0 (See [IDLE and tkinter with Tcl/Tk on Mac OS X](https://www.python.org/download/mac/tcltk/))
+2. Python 2.7.10 or the latest
+3. Python 3.5.0 or the latest
 4. pip (Python 2 only)
     1. Note `pip3` comes with Python 3. The steps below are for Python 2
     2. `curl -O https://bootstrap.pypa.io/get-pip.py`
