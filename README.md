@@ -62,6 +62,7 @@ mac-os-x-notes
         2. `source <env>/bin/activate`
         3. Then can go anywhere and do work. When done, `deactivate`
     3. `virtualenv --python=python2.7 <env-name>`. Note the default is the interpreter that virtualenv was installed with. In my case `which virtualenv` shows it is with python 3.5.
+    4. `pip freeze > requirements.txt` and `pip install -r requirements.txt`.
 
 ### Data Analysis Environment
 
