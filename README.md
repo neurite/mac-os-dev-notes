@@ -26,7 +26,37 @@ mac-os-x-notes
 ### Terminal
 
 1. Source Code Pro, Cousine, Droid Sans, Droid Sans Mono from Font Squirrel
-2. Create `~/.vimrc` and add the configuration
+2. By default the Mac OS terminal is a login shell (`/usr/bin/login`). The login shell executes the following profiles in sequence:
+
+    ```
+    /etc/profile
+    ~/.bash_profile
+    ~/.bash_login
+    ~/.profile
+    ```
+
+Note that a login shell does not execute `~/.bashrc`. We can make it a non-login shell (`/bin/bash`).  No matter what shell we choose, to be consistent edit `~/.bash_profile` so that it looks like this:
+
+    ```bash
+    if [ -r ~/.profile ]; then
+        . ~/.profile;
+    fi
+    
+    # More ~/.bash_profile script
+    
+    if [ -r ~/.bashrc ]; then
+        . ~/.bashrc;
+    fi
+    ```
+
+Then add the following in `~/.bashrc`:
+
+    ```
+    # Make sure /usr/local/bin is before /usr/bin
+    PATH="/usr/local/bin:${PATH}"
+    ```
+
+4. Create `~/.vimrc` and add the configuration
 
     ```bash
     syntax on
@@ -106,16 +136,3 @@ mac-os-x-notes
         ```
 
 ### Java JDK
-
-### .bash_profile
-
-This edits `~/.bash_profile`. Besides the lines added by Python, add the following at the beginning:
-
-```bash
-    if [ -r "${HOME}/.profile" ]; then
-        source "${HOME}/.profile"
-    fi
-    
-    # Make sure /usr/local/bin is before /usr/bin
-    PATH="/usr/local/bin:${PATH}"
-```
