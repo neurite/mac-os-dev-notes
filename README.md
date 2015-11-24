@@ -5,8 +5,7 @@ mac-os-x-notes
 
 1. Prepare [a bootable USB disk of El Capitan](https://www.google.com/search?q=bootable+USB+El+Capitan).
 2. Hold down the Option key when booting up.
-3. Format as `Mac OS Extended, Journaled`.
-4. Install the OS and then update.
+3. Install the OS and then update. Note format the partition as `Mac OS Extended, Journaled`.
 5. Customize:
     1. System Preferences... --> Tackpad
     2. System Preferences... --> Desktop
@@ -27,36 +26,36 @@ mac-os-x-notes
 
 1. Source Code Pro, Cousine, Droid Sans, Droid Sans Mono from Font Squirrel
 2. By default the Mac OS terminal is a login shell (`/usr/bin/login`). The login shell executes the following profiles in sequence:
-
-    ```
+    
+    ```bash
     /etc/profile
     ~/.bash_profile
     ~/.bash_login
     ~/.profile
     ```
-
-Note that a login shell does not execute `~/.bashrc`. We can make it a non-login shell (`/bin/bash`).  No matter what shell we choose, to be consistent edit `~/.bash_profile` so that it looks like this:
-
+    
+    Note that a login shell does not execute `~/.bashrc`. We can make it a non-login shell (`/bin/bash`). No matter what shell we choose, to be consistent edit `~/.bash_profile` so that it looks like this:
+    
     ```bash
     if [ -r ~/.profile ]; then
         . ~/.profile;
     fi
     
-    # More ~/.bash_profile script
+    # More ~/.bash_profile script goes here
     
     if [ -r ~/.bashrc ]; then
         . ~/.bashrc;
     fi
     ```
-
-Then add the following in `~/.bashrc`:
-
-    ```
+    
+    Then add the following in `~/.bashrc`:
+    
+    ```bash
     # Make sure /usr/local/bin is before /usr/bin
     PATH="/usr/local/bin:${PATH}"
     ```
 
-4. Create `~/.vimrc` and add the configuration
+3. Create `~/.vimrc` and add the configuration
 
     ```bash
     syntax on
