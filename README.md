@@ -13,6 +13,7 @@ mac-os-x-notes
     3. System Preferences... --> Dock
     4. Finder --> Preferences...
     5. Safari
+    6. Chrome
 6. Install:
     1. Xcode Command-Line Tools
     2. VirtualBox
@@ -24,7 +25,7 @@ mac-os-x-notes
 
 ### Terminal
 
-1. Cousine, Droid Sans, Droid Sans Mono from Font Squirrel
+1. Source Code Pro, Cousine, Droid Sans, Droid Sans Mono from Font Squirrel
 2. Create `~/.vimrc` and add the configuration
 
     ```bash
@@ -49,32 +50,18 @@ mac-os-x-notes
 ### Python
 
 1. ActiveTcl 8.5.18.0 (See [IDLE and tkinter with Tcl/Tk on Mac OS X](https://www.python.org/download/mac/tcltk/))
-2. Python 2.7.10 or the latest
-3. Python 3.5.0 or the latest
-4. pip (Python 2 only)
-    1. Note `pip3` comes with Python 3. The steps below are for Python 2
-    2. `curl -O https://bootstrap.pypa.io/get-pip.py`
-    3. `sudo python get-pip.py`
-    4. `rm get-pip.py`
-    5. pip usage
-        1. `sudo pip install <pkg>`
-        2. `sudo pip install -U <pkg>`
-    6. pip maintenance
-        1. `sudo pip install -U pip`
-        2. `sudo pip freeze`
-        3. `sudo pip install -U <pkg>`
-5. virtualenv (Python 2 only)
-    1. Note `pyenv` comes with Python 3. The steps below are for Python 2
-    2. `sudo pip install virtualenv`
-    3. In the directory `~/Applications`:
+2. Python 2.7.10 (includes pip). The commands to run are `python` and `pip` respectively.
+3. Python 3.5.0 (includes pip3). The commands to run are `python3` and `pip3` respectively.
+4. pip
+    1. `sudo -H pip install --upgrade pip`
+    2. `sudo -H pip list` and then upgrade each package
+5. virtualenv
+    1. `sudo -H pip install virtualenv`
+    2. In the directory `~/Applications`:
         1. `virtualenv <env-name>`
         2. `source <env>/bin/activate`
         3. Then can go anywhere and do work. When done, `deactivate`
-6. IPython
-    1. Make sure Python 3 is installed `which python3` and `which pip3`
-    2. Update existing pip packages `sudo pip3 list` then for each package `sudo pip3 install --upgrade <package>`
-    3. Install `sudo pip3 install jupyter`
-    4. Verify `which ipython` and `which jupyter`
+    3. `virtualenv --python=python2.7 <env-name>`. Note the default is the interpreter that virtualenv was installed with. In my case `which virtualenv` shows it is with python 3.5.
 
 ### Data Analysis Environment
 
