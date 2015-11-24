@@ -64,54 +64,48 @@ mac-os-x-notes
     3. `virtualenv --python=python2.7 <env-name>`. Note the default is the interpreter that virtualenv was installed with. In my case `which virtualenv` shows it is with python 3.5.
     4. `pip freeze > requirements.txt` and `pip install -r requirements.txt`.
 
-### Data Analysis Environment
+### Python Environments
 
-1. `data-analysis`
+1. [The SciPy Stack](http://www.scipy.org/)
     1. `cd ~/Applications`
-    2. `virtualenv data-analysis`
-    3. `cd data-analysis`
+    2. `virtualenv scipy`
+    3. `cd scipy`
     4. `source bin/activate`
     5. `pip install --upgrade pip`
     6. `pip freeze` # then upgrade individual packages
-    7. `pip install numpy`
-    8. `pip install scipy`
-    9. `pip install matplotlib`
+    7. `pip install gnureadline` # for command line editing, tab completion, etc. replaces libedit
+    8. `pip install nose`
+    9. `pip install pyzmq pygments`
     10. `pip install ipython[all]`
-    11. `pip install pandas`
-    12. `pip install sympy`
-2. `data-analysis-3`
+    11. `pip install numpy`
+    12. `pip install scipy`
+    13. `pip install matplotlib`
+    14. `pip install pandas`
+    15. `pip install sympy`
+
+2. [AWS Command Line](https://aws.amazon.com/cli/)
     1. `cd ~/Applications`
-    2. `pyenv data-analysis-3`
-    3. `cd data-analysis-3`
+    2. `virtualenv aws`
+    3. `cd scipy`
     4. `source bin/activate`
-    5. Note at this point, `pip` and `pip3` point to the same binary. Can be verified by comparing `pip --version` and `pip3 --version`. We prefere `pip`
-    6. `pip install --upgrade pip`
-    7. `pip freeze` # then upgrade individual packages
-    8. `pip install numpy`
-    9. `pip install scipy`
-    10. `pip install matplotlib`
-    11. `pip install ipython[all]`
-    12. `pip install pandas`
-    13. `pip install sympy`
+    5. `pip install --upgrade pip`
+    6. `pip freeze` # then upgrade individual packages
+    7. `pip install awscli`
+    8. Create `~/.aws/config` and make sure only the user has the access. Add the following:
 
-#### AWS Environment (`aws-cli`)
+        ```
+        [default]
+        region=us-west-2
+        aws_access_key_id=<your_aws_access_key_id>
+        aws_secret_access_key=<your_aws_secret_access_key>
+        
+        [profile prod]
+        region=us-west-2
+        aws_access_key_id=<your_aws_access_key_id>
+        aws_secret_access_key=<your_aws_secret_access_key>
+        ```
 
-1. `pip3 install awscli`
-2. Create `~/.aws/config` and make sure only the user has the access. Add the following:
-
-    ```
-    [default]
-    region=us-east-1
-    aws_access_key_id=<your_aws_access_key_id>
-    aws_secret_access_key=<your_aws_secret_access_key>
-    
-    [profile dev]
-    region=us-west-2
-    aws_access_key_id=<your_aws_access_key_id>
-    aws_secret_access_key=<your_aws_secret_access_key>
-    ```
-
-### Java JDK 7
+### Java JDK
 
 ### .bash_profile
 
