@@ -103,7 +103,18 @@ mac-os-x-notes
     14. `pip install pandas`
     15. `pip install sympy`
 
-2. [AWS Command Line](https://aws.amazon.com/cli/)
+2. [scikit-learn](http://scikit-learn.org/)
+    1. `cd ~/Applications`
+    2. `virtualenv scikit-learn`
+    3. `cd scikit-learn`
+    4. `source bin/activate`
+    5. `pip install --upgrade pip`
+    6. `pip freeze` # then upgrade individual packages
+    7. `cp ~/Applications/scipy/requirements.txt ./` # copy requirements.txt dumped by th scipy env
+    8. `pip install -r requirements.txt`
+    9. `pip install scikit-learn`
+
+3. [AWS Command Line](https://aws.amazon.com/cli/)
     1. `cd ~/Applications`
     2. `virtualenv aws`
     3. `cd scipy`
