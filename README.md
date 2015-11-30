@@ -109,10 +109,9 @@ mac-os-x-notes
     3. `cd scikit-learn`
     4. `source bin/activate`
     5. `pip install --upgrade pip`
-    6. `pip freeze` # then upgrade individual packages
-    7. `cp ~/Applications/scipy/requirements.txt ./` # copy requirements.txt dumped by th scipy env
-    8. `pip install -r requirements.txt`
-    9. `pip install scikit-learn`
+    6. `cp ~/Applications/scipy/requirements.txt ./` # copy requirements.txt dumped by th scipy env
+    7. `pip install -r requirements.txt`
+    8. `pip install scikit-learn`
 
 3. [AWS Command Line](https://aws.amazon.com/cli/)
     1. `cd ~/Applications`
