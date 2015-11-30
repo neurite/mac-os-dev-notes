@@ -92,7 +92,7 @@ mac-os-x-notes
     3. `cd scipy`
     4. `source bin/activate`
     5. `pip install --upgrade pip`
-    6. `pip freeze` # then upgrade individual packages
+    6. `pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U` # upgrade existing packages
     7. `pip install gnureadline` # for command line editing, tab completion, etc. replaces libedit
     8. `pip install nose`
     9. `pip install pyzmq pygments`
@@ -102,6 +102,7 @@ mac-os-x-notes
     13. `pip install matplotlib`
     14. `pip install pandas`
     15. `pip install sympy`
+    16. `pip freeze > requirements.txt`
 
 2. [scikit-learn](http://scikit-learn.org/)
     1. `cd ~/Applications`
