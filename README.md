@@ -87,22 +87,28 @@ mac-os-x-notes
 ### Python Environments
 
 1. [The SciPy Stack](http://www.scipy.org/)
-    1. `cd ~/Applications`
-    2. `virtualenv scipy`
-    3. `cd scipy`
-    4. `source bin/activate`
-    5. `pip install --upgrade pip`
-    6. `pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U` # upgrade existing packages
-    7. `pip install gnureadline` # for command line editing, tab completion, etc. replaces libedit
-    8. `pip install nose`
-    9. `pip install pyzmq pygments`
-    10. `pip install ipython[all]`
-    11. `pip install numpy`
-    12. `pip install scipy`
-    13. `pip install matplotlib`
-    14. `pip install pandas`
-    15. `pip install sympy`
-    16. `pip freeze > requirements.txt`
+
+    ```bash
+    cd ~/Applications
+    virtualenv scipy
+    cd scipy
+    source bin/activate
+    pip install --upgrade pip
+    # upgrade existing packages
+    pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install --upgrade
+    # replaces libedit for command line editing, tab completion, etc.
+    pip install gnureadline
+    pip install nose
+    pip install pyzmq pygments
+    pip install ipython[all]
+    pip install numpy
+    pip install scipy
+    pip install matplotlib
+    pip install pandas
+    pip install sympy
+    pip freeze > requirements.txt
+    deactivate
+    ```
 
 2. [scikit-learn](http://scikit-learn.org/)
     1. `cd ~/Applications`
