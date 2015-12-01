@@ -124,18 +124,13 @@ mac-os-x-notes
     cp ~/Applications/scipy/requirements.txt ./
     pip install -r requirements.txt
     pip install scikit-learn
+    pip freeze > requirements.txt
     deactivate
     ```
 
 3. [AWS Command Line](https://aws.amazon.com/cli/)
-    1. `cd ~/Applications`
-    2. `virtualenv aws`
-    3. `cd aws`
-    4. `source bin/activate`
-    5. `pip install --upgrade pip`
-    6. `pip freeze` # then upgrade individual packages
-    7. `pip install awscli`
-    8. Create `~/.aws/config` and make sure only the user has the access. Add the following:
+    1. Within a virtual env `pip install awscli`
+    2. Create `~/.aws/config` and make sure only the user has the access:
 
         ```
         [default]
