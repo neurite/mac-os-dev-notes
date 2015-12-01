@@ -86,7 +86,29 @@ mac-os-x-notes
 
 ### Python Environments
 
-1. [The SciPy Stack](http://www.scipy.org/)
+1. [IPython](http://ipython.org/)
+
+    ```bash
+    mkdir -p ~/Applications
+    cd ~/Applications
+    virtualenv ipython
+    cd ipython
+    source bin/activate
+    pip install --upgrade pip
+    # upgrade all the packages
+    pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install --upgrade
+    # replaces libedit of Mac OS X for command line editing, tab completion, etc.
+    pip install gnureadline
+    # ipython dependency for testing
+    pip install nose
+    # for ipython’s inter-process communication and Qt console
+    pip install pyzmq pygments
+    pip install ipython[all]
+    pip freeze > requirements.txt
+    deactivate
+    ```
+
+2. [The SciPy Stack](http://www.scipy.org/)
 
     ```bash
     mkdir -p ~/Applications
@@ -97,9 +119,10 @@ mac-os-x-notes
     pip install --upgrade pip
     # upgrade all the packages
     pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install --upgrade
-    # replaces libedit for command line editing, tab completion, etc.
+    # replaces libedit of Mac OS X for command line editing, tab completion, etc.
     pip install gnureadline
     pip install nose
+    # For IPython’s inter-process communication and Qt console
     pip install pyzmq pygments
     pip install ipython[all]
     pip install numpy
@@ -111,7 +134,7 @@ mac-os-x-notes
     deactivate
     ```
 
-2. [scikit-learn](http://scikit-learn.org/)
+3. [scikit-learn](http://scikit-learn.org/)
 
     ```bash
     mkdir -p ~/Applications
@@ -128,7 +151,7 @@ mac-os-x-notes
     deactivate
     ```
 
-3. [AWS Command Line](https://aws.amazon.com/cli/)
+4. [AWS Command Line](https://aws.amazon.com/cli/)
     1. Within a virtual env `pip install awscli`
     2. Create `~/.aws/config` and make sure only the user has the access:
 
