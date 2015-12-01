@@ -89,12 +89,13 @@ mac-os-x-notes
 1. [The SciPy Stack](http://www.scipy.org/)
 
     ```bash
+    mkdir -p ~/Applications
     cd ~/Applications
     virtualenv scipy
     cd scipy
     source bin/activate
     pip install --upgrade pip
-    # upgrade existing packages
+    # upgrade all the packages
     pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install --upgrade
     # replaces libedit for command line editing, tab completion, etc.
     pip install gnureadline
@@ -111,19 +112,25 @@ mac-os-x-notes
     ```
 
 2. [scikit-learn](http://scikit-learn.org/)
-    1. `cd ~/Applications`
-    2. `virtualenv scikit-learn`
-    3. `cd scikit-learn`
-    4. `source bin/activate`
-    5. `pip install --upgrade pip`
-    6. `cp ~/Applications/scipy/requirements.txt ./` # copy requirements.txt dumped by th scipy env
-    7. `pip install -r requirements.txt`
-    8. `pip install scikit-learn`
+
+    ```bash
+    mkdir -p ~/Applications
+    cd ~/Applications
+    virtualenv scikit-learn
+    cd scikit-learn
+    source bin/activate
+    pip install --upgrade pip
+    # copy over requirements.txt dumped by th scipy env
+    cp ~/Applications/scipy/requirements.txt ./
+    pip install -r requirements.txt
+    pip install scikit-learn
+    deactivate
+    ```
 
 3. [AWS Command Line](https://aws.amazon.com/cli/)
     1. `cd ~/Applications`
     2. `virtualenv aws`
-    3. `cd scipy`
+    3. `cd aws`
     4. `source bin/activate`
     5. `pip install --upgrade pip`
     6. `pip freeze` # then upgrade individual packages
