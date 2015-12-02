@@ -83,6 +83,7 @@ mac-os-x-notes
         3. Then can go anywhere and do work. When done, `deactivate`
     3. `virtualenv --python=python2.7 <env-name>`. Note the default is the interpreter that virtualenv was installed with. In my case `which virtualenv` shows it is with python 3.5.
     4. `pip freeze > requirements.txt` and `pip install -r requirements.txt`.
+    5. `pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install --upgrade`
 
 ### Python Environments
 
@@ -117,14 +118,11 @@ mac-os-x-notes
     cd scipy
     source bin/activate
     pip install --upgrade pip
+    # copy over requirements.txt dumped by th ipython env
+    cp ~/Applications/ipython/requirements.txt ./
+    pip install -r requirements.txt
     # upgrade all the packages
     pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install --upgrade
-    # replaces libedit of Mac OS X for command line editing, tab completion, etc.
-    pip install gnureadline
-    pip install nose
-    # For IPython’s inter-process communication and Qt console
-    pip install pyzmq pygments
-    pip install ipython[all]
     pip install numpy
     pip install scipy
     pip install matplotlib
@@ -146,12 +144,34 @@ mac-os-x-notes
     # copy over requirements.txt dumped by th scipy env
     cp ~/Applications/scipy/requirements.txt ./
     pip install -r requirements.txt
+    # upgrade all the packages
+    pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install --upgrade
     pip install scikit-learn
     pip freeze > requirements.txt
     deactivate
     ```
 
-4. [AWS Command Line](https://aws.amazon.com/cli/)
+4. BeautifulSoup
+
+    ```bash
+    mkdir -p ~/Applications
+    cd ~/Applications
+    virtualenv bs4
+    cd bs4
+    source bin/activate
+    pip install --upgrade pip
+    # copy over requirements.txt dumped by th ipython env
+    cp ~/Applications/ipython/requirements.txt ./
+    pip install -r requirements.txt
+    # upgrade all the packages
+    pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install --upgrade
+    pip install requests
+    pip install beautifulsoup4
+    pip freeze > requirements.txt
+    deactivate
+    ```
+
+5. [AWS Command Line](https://aws.amazon.com/cli/)
     1. Within a virtual env `pip install awscli`
     2. Create `~/.aws/config` and make sure only the user has the access:
 
