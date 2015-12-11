@@ -24,8 +24,8 @@ mac-os-x-notes
 
 ### Terminal
 
-1. Source Code Pro, Cousine, Droid Sans, Droid Sans Mono from Font Squirrel
-2. By default the Mac OS terminal is a login shell (`/usr/bin/login`). The login shell executes `~/.bash_profile`. Note that it does not execute `~/.bashrc`. We can make it a non-login shell (`/bin/bash`). No matter what shell we choose, to be consistent edit, `~/.bash_profile` so that it looks like this:
+1. Anonymous Pro, Cousine, Droid Sans, Droid Sans Mono, Source Code Pro from Font Squirrel
+2. By default the Mac OS terminal is a login shell (`/usr/bin/login`). The login shell executes `~/.bash_profile`. Note that it does not execute `~/.bashrc`. We can make it a non-login shell (`/bin/bash`). No matter what shell we choose, to be consistent, edit `~/.bash_profile` so that it looks like this:
     
     ```bash
     if [ -r ~/.profile ]; then
