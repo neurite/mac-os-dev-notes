@@ -70,8 +70,8 @@ mac-os-x-notes
 ### Python
 
 1. ActiveTcl 8.5.18.0 (See [IDLE and tkinter with Tcl/Tk on Mac OS X](https://www.python.org/download/mac/tcltk/))
-2. Python 2.7.10 (includes pip). The commands to run are `python` and `pip` respectively.
-3. Python 3.5.0 (includes pip3). The commands to run are `python3` and `pip3` respectively.
+2. Python 2.7.11 (includes pip). The commands to run are `python` and `pip` respectively.
+3. Python 3.5.1 (includes pip3). The commands to run are `python3` and `pip3` respectively.
 4. pip
     1. `sudo -H pip install --upgrade pip`
     2. `sudo -H pip list` and then upgrade each package
