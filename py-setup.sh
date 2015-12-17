@@ -15,7 +15,6 @@ pip install nose
 # for ipython’s inter-process communication and Qt console
 pip install pyzmq pygments
 pip install ipython[all]
-cd ..
 pip freeze > ipython.txt
 deactivate
 cd
