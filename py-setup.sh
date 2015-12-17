@@ -28,8 +28,6 @@ virtualenv scipy
 source scipy/bin/activate
 pip install --upgrade pip
 pip install -r ipython.txt
-# upgrade all the packages
-pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install --upgrade
 pip install numpy
 pip install scipy
 # matplotlib 1.5.0 and up does work with virtualenv on Mac OS
@@ -61,8 +59,6 @@ virtualenv bs4
 source bs4/bin/activate
 pip install --upgrade pip
 pip install -r ipython.txt
-# upgrade all the packages
-pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install --upgrade
 pip install requests
 pip install beautifulsoup4
 pip freeze > bs4.txt
