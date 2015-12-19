@@ -39,7 +39,7 @@ mac-os-x-notes
     fi
     ```
     
-    Then add the following in `~/.bashrc`:
+    Check PATH `echo $PATH`. Add the following in `~/.bashrc` if necessary:
     
     ```bash
     # Make sure /usr/local/bin is before /usr/bin
