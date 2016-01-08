@@ -186,3 +186,31 @@ mac-os-x-notes
         ```
 
 ### Java JDK
+
+1. Java virtual machines are installed at `/Library/Java/JavaVirtualMachines`. For example,
+
+  ```bash
+  $ls -l /Library/Java/JavaVirtualMachines
+  drwxr-xr-x  3 root  wheel  102 Jul 14 14:52 1.6.0.jdk
+  drwxr-xr-x  3 root  wheel  102 Jan  4 16:06 jdk1.8.0_66.jdk
+  ```
+
+2. If Java 6 is installed using [the Apple package](https://support.apple.com/kb/DL1572), Java files are also installed at `/System/Library/Frameworks/JavaVM.framework`. This used to be the location for Apple's system JVMs. This is for legacy Java 6. Newer versions of Java, Java 7 and 8, are not maintained by Apple any more. They are not set up at this location, not any more.
+3. `/usr/libexec/java_home` is where the Java home is read. For example,
+
+  ```bash
+  $/usr/libexec/java_home         # the default Java home
+  /Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home
+  $/usr/libexec/java_home -v 1.8  # Java 8 home
+  /Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home
+  $/usr/libexec/java_home -v 1.6  # Java 6 home
+  /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+  $/usr/libexec/java_home -V      # List of installed JVMs
+  ```
+
+4. Set up JAVA_HOME like this for the terminal
+
+  ```bash
+  export JAVA_HOME="$(/usr/libexec/java_home)"
+  export PATH="${PATH}:${JAVA_HOME}/bin"
+  ```
