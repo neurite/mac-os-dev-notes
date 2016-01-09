@@ -10,9 +10,10 @@ mac-os-x-notes
     1. System Preferences... --> Tackpad
     2. System Preferences... --> Desktop
     3. System Preferences... --> Dock
-    4. Finder --> Preferences...
-    5. Safari
-    6. Chrome
+    4. System Preferences... --> Security & Privacy --> Firewall
+    5. Finder --> Preferences...
+    6. Safari
+    7. Chrome
 6. Install:
     1. Xcode Command-Line Tools
     2. VirtualBox
