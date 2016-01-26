@@ -21,7 +21,7 @@ source deactivate
 echo 'alias env-ipython="source activate ipython"' >> ~/.bashrc
 conda create --yes --name ipython3 python=3
 source activate ipython3
-conda install --yes --channel ananconda ipython-notebook
+conda install --yes --channel anaconda ipython-notebook
 source deactivate
 echo 'alias env-ipython3="source activate ipython3"' >> ~/.bashrc
 
