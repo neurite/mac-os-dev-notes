@@ -7,188 +7,26 @@ mac-os-x-notes
 2. Hold down the Option key when booting up.
 3. Install the OS and then update. Note format the partition as `Mac OS Extended, Journaled`.
 5. Customize:
-    1. System Preferences... --> Tackpad
-    2. System Preferences... --> Desktop
-    3. System Preferences... --> Dock
-    4. System Preferences... --> Security & Privacy --> Firewall
-    5. Finder --> Preferences...
-    6. Safari
-    7. Chrome
+  1. System Preferences... --> Tackpad
+  2. System Preferences... --> Desktop
+  3. System Preferences... --> Dock
+  4. System Preferences... --> Security & Privacy --> Firewall
+  5. Finder --> Preferences...
+  6. Safari
+  7. Chrome
 6. Install:
-    1. Xcode Command-Line Tools
-    2. VirtualBox
-    3. Vagrant
-    4. Docker Custom Install
-        1. Docker Client
-        2. Docker Machine
-        3. Docker Compose
+  1. Xcode Command-Line Tools
+  2. VirtualBox
+  3. Vagrant
+  4. Docker Custom Install
+    1. Docker Client
+    2. Docker Machine
+    3. Docker Compose
+  5. Anonymous Pro, Cousine, Droid Sans, Droid Sans Mono, Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
 
-### Terminal
+### Java
 
-1. Anonymous Pro, Cousine, Droid Sans, Droid Sans Mono, Source Code Pro from Font Squirrel
-2. By default the Mac OS terminal is a login shell (`/usr/bin/login`). The login shell executes `~/.bash_profile`. Note that it does not execute `~/.bashrc`. We can make it a non-login shell (`/bin/bash`). No matter what shell we choose, to be consistent, edit `~/.bash_profile` so that it looks like this:
-    
-    ```bash
-    if [ -r ~/.profile ]; then
-        . ~/.profile;
-    fi
-    
-    # More ~/.bash_profile script goes here
-    
-    if [ -r ~/.bashrc ]; then
-        . ~/.bashrc;
-    fi
-    ```
-    
-    Check PATH `echo $PATH`. Add the following in `~/.bashrc` if necessary:
-    
-    ```bash
-    # Make sure /usr/local/bin is before /usr/bin
-    PATH="/usr/local/bin:${PATH}"
-    ```
-
-3. Create `~/.vimrc` and add the configuration
-
-    ```bash
-    syntax on
-    set background=dark
-    filetype plugin indent on
-    set showcmd
-    set showmatch
-    set ignorecase
-    set smartcase
-    set incsearch
-    set autowrite
-    set hidden
-    set mouse=a
-    set number
-    set ruler
-    set tabstop=4
-    set shiftwidth=4
-    set expandtab
-    ```
-
-### Python
-
-1. ActiveTcl 8.5.18.0 (See [IDLE and tkinter with Tcl/Tk on Mac OS X](https://www.python.org/download/mac/tcltk/))
-2. Python 2.7.11 (includes pip). The commands to run are `python` and `pip` respectively.
-3. Python 3.5.1 (includes pip3). The commands to run are `python3` and `pip3` respectively.
-4. pip
-    1. `sudo -H pip install --upgrade pip`
-    2. `sudo -H pip list` and then upgrade each package
-5. virtualenv
-    1. `sudo -H pip install virtualenv`
-    2. In the directory `~/Applications`:
-        1. `virtualenv <env-name>`
-        2. `source <env>/bin/activate`
-        3. Then can go anywhere and do work. When done, `deactivate`
-    3. `virtualenv --python=python2.7 <env-name>`. Note the default is the interpreter that virtualenv was installed with. In my case `which virtualenv` shows it is with python 3.5.
-    4. `pip freeze > requirements.txt` and `pip install -r requirements.txt`.
-    5. `pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install --upgrade`
-
-### Python Environments
-
-1. [IPython](http://ipython.org/)
-
-    ```bash
-    mkdir -p ~/Applications/virtualenvs
-    cd ~/Applications/virtualenvs
-    virtualenv ipython
-    source ipython/bin/activate
-    pip install --upgrade pip
-    # upgrade all the packages
-    pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install --upgrade
-    # replaces libedit of Mac OS X for command line editing, tab completion, etc.
-    pip install gnureadline
-    # ipython dependency for testing
-    pip install nose
-    # for ipython’s inter-process communication and Qt console
-    pip install pyzmq pygments
-    pip install ipython[all]
-    cd ..
-    pip freeze > ipython.txt
-    deactivate
-    cd
-    echo 'alias env-ipython="source ~/Applications/virtualenvs/ipython/bin/activate"' >> ~/.bashrc
-    ```
-
-2. [The SciPy Stack](http://www.scipy.org/)
-
-    ```bash
-    mkdir -p ~/Applications/virtualenvs
-    cd ~/Applications/virtualenvs
-    virtualenv scipy
-    source scipy/bin/activate
-    pip install --upgrade pip
-    pip install -r ipython.txt
-    # upgrade all the packages
-    pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install --upgrade
-    pip install numpy
-    pip install scipy
-    # matplotlib 1.5.0 and up does work with virtualenv on Mac OS
-    pip install matplotlib==1.4.3
-    pip install pandas
-    pip install sympy
-    pip freeze > scipy.txt
-    deactivate
-    cd
-    echo 'alias env-scipy="source ~/Applications/virtualenvs/scipy/bin/activate"' >> ~/.bashrc
-    ```
-
-3. [scikit-learn](http://scikit-learn.org/)
-
-    ```bash
-    mkdir -p ~/Applications/virtualenvs
-    cd ~/Applications/virtualenvs
-    virtualenv scikit-learn
-    source scikit-learn/bin/activate
-    pip install --upgrade pip
-    pip install -r scipy.txt
-    pip install scikit-learn
-    pip freeze > scikit-learn.txt
-    deactivate
-    cd
-    echo 'alias env-scikit="source ~/Applications/virtualenvs/scikit-learn/bin/activate"' >> ~/.bashrc
-    ```
-
-4. BeautifulSoup
-
-    ```bash
-    mkdir -p ~/Applications/virtualenvs
-    cd ~/Applications/virtualenvs
-    virtualenv bs4
-    source bs4/bin/activate
-    pip install --upgrade pip
-    pip install -r ipython.txt
-    # upgrade all the packages
-    pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install --upgrade
-    pip install requests
-    pip install beautifulsoup4
-    pip freeze > bs4.txt
-    deactivate
-    cd
-    echo 'alias env-bs4="source ~/Applications/virtualenvs/bs4/bin/activate"' >> ~/.bashrc
-    ```
-
-5. [AWS Command Line](https://aws.amazon.com/cli/)
-    1. Within a virtual env `pip install awscli`
-    2. Create `~/.aws/config` and make sure only the user has the access:
-
-        ```
-        [default]
-        region=us-west-2
-        aws_access_key_id=<your_aws_access_key_id>
-        aws_secret_access_key=<your_aws_secret_access_key>
-        
-        [profile prod]
-        region=us-west-2
-        aws_access_key_id=<your_aws_access_key_id>
-        aws_secret_access_key=<your_aws_secret_access_key>
-        ```
-
-### Java JDK
-
-1. Java virtual machines are installed at `/Library/Java/JavaVirtualMachines`. For example,
+1. Download and install [Oracle Java JDK](www.oracle.com/technetwork/java/javase/downloads/). Java virtual machines are installed at `/Library/Java/JavaVirtualMachines`.
 
   ```bash
   $ls -l /Library/Java/JavaVirtualMachines
@@ -196,7 +34,7 @@ mac-os-x-notes
   drwxr-xr-x  3 root  wheel  102 Jan  4 16:06 jdk1.8.0_66.jdk
   ```
 
-2. If Java 6 is installed using [the Apple package](https://support.apple.com/kb/DL1572), Java files are also installed at `/System/Library/Frameworks/JavaVM.framework`. This used to be the location for Apple's system JVMs. This is for legacy Java 6. Newer versions of Java, Java 7 and 8, are not maintained by Apple any more. They are not set up at this location, not any more.
+2. Before Mac OS X 10.7 Lion, Java is also set up at `/System/Library/Frameworks/JavaVM.framework`. Let's call this framework Java. If Java 6 is installed using [the Apple package](https://support.apple.com/kb/DL1572), it is still installed as framework Java, at `/System/Library/Frameworks/JavaVM.framework`. This is for legacy Java 6 only. Newer versions of Java, Java 7 and 8, are from Oracle and are not at system frameworks any more.
 3. `/usr/libexec/java_home` is where the Java home is read. For example,
 
   ```bash
@@ -209,9 +47,36 @@ mac-os-x-notes
   $/usr/libexec/java_home -V      # List of installed JVMs
   ```
 
-4. Set up JAVA_HOME like this for the terminal
+4. Set up JAVA_HOME for the terminal. Certain apps at command-line need the JAVA_HOME environment variable.
 
   ```bash
   export JAVA_HOME="$(/usr/libexec/java_home)"
   export PATH="${PATH}:${JAVA_HOME}/bin"
   ```
+
+5. Download and install Eclipse.
+
+### Python
+
+1. ActiveTcl 8.5.18.0 (See [IDLE and tkinter with Tcl/Tk on Mac OS X](https://www.python.org/download/mac/tcltk/)).
+2. Python 2.7.11 (includes pip). The commands to run are `python` and `pip` respectively.
+3. Python 3.5.1 (includes pip3). The commands to run are `python3` and `pip3` respectively.
+4. Anaconda. Conda is both a package manager and an environment manager.
+  1. `conda update conda`
+  2. Environments
+    1. `conda create --name snowflakes` or `conda create --name snowflakes3 python=3`
+    2. `source activate snowflakes` and `source deactivate`
+    3. `conda env list`
+    4. `conda create --name flowers --clone snowflakes`
+    5. `conda remove --name flowers --all`
+    6. `conda env export > snowflakes.yml`
+    7. `conda env create -f snowflakes.yml`
+  3. Packages
+    1. `conda list`
+    2. `conda search beautiful-soup`
+    3. `conda install -c pandas bottleneck`
+    4. `conda pip install see`
+
+### Terminal
+
+By default the Mac OS terminal is a login shell (`/usr/bin/login`). The login shell executes `~/.bash_profile`. Note that it does not execute `~/.bashrc`. We either use `~/.bash_profile` directly or `source ~/.bashrc` in `~/.bash_profile`. We can also make the terminal a non-login shell (`/bin/bash`).
