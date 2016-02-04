@@ -10,6 +10,7 @@ fi
 ### .bashrc
 chmod +x "${MAC_NOTES_FOLDER}/bashrc.sh"
 "${MAC_NOTES_FOLDER}/bashrc.sh"
+
 echo '# python' >> ~/.bashrc
 
 ### IPython
