@@ -3,7 +3,7 @@
 ### MAC_NOTES_FOLDER
 MAC_NOTES_FOLDER="${HOME}/Workspace/mac-os-x-notes"
 if [ ! -r "${MAC_NOTES_FOLDER}" ]; then
-    echo "Erroc reading ${MAC_NOTES_FOLDER}" 1>&2
+    echo "Error reading ${MAC_NOTES_FOLDER}" 1>&2
     exit 1
 fi
 
