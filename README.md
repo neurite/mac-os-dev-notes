@@ -26,7 +26,7 @@ mac-os-x-notes
 
 ### Java
 
-1. Download and install [Oracle Java JDK](www.oracle.com/technetwork/java/javase/downloads/). Java virtual machines are installed at `/Library/Java/JavaVirtualMachines`.
+1. Download and install [Oracle Java JDK](https://www.oracle.com/technetwork/java/javase/downloads/). Java virtual machines are installed at `/Library/Java/JavaVirtualMachines`.
 
   ```bash
   $ls -l /Library/Java/JavaVirtualMachines
