@@ -38,14 +38,14 @@ fi
 ### gradle
 if [[ ! $() ]]; then
     cd "${HOME}/Packages"
-    curl -O https://downloads.gradle.org/distributions/gradle-2.10-bin.zip
+    curl -O https://downloads.gradle.org/distributions/gradle-2.11-bin.zip
     cd
-    cp "${HOME}/Packages/gradle-2.10-bin.zip" "${HOME}/Applications/"
+    cp "${HOME}/Packages/gradle-2.11-bin.zip" "${HOME}/Applications/"
     cd "${HOME}/Applications"
-    unzip gradle-2.10-bin.zip
-    rm gradle-2.10-bin.zip
+    unzip gradle-2.11-bin.zip
+    rm gradle-2.11-bin.zip
     cd
     echo '# gradle' >> ~/.bashrc
-    echo 'export GRADLE_HOME="${APPS_HOME}/gradle-2.10"' >> ~/.bashrc
+    echo 'export GRADLE_HOME="${APPS_HOME}/gradle-2.11"' >> ~/.bashrc
     echo 'export PATH="${PATH}:${GRADLE_HOME}/bin"' >> ~/.bashrc
 fi
