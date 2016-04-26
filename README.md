@@ -74,7 +74,7 @@ mac-os-x-notes
     1. `conda list`
     2. `conda search beautiful-soup`
     3. `conda install -c pandas bottleneck`
-    4. `pip install see`
+    4. `pip install see # inside the activated environment`
   3. Updates
     1. `conda update --all`
     2. `conda update conda`
