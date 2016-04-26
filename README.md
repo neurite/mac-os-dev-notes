@@ -74,8 +74,8 @@ mac-os-x-notes
   3. Packages
     1. `conda list`
     2. `conda search beautiful-soup`
-    3. `conda install -c pandas bottleneck`
-    4. `conda pip install see`
+    3. `conda install -c pandas bottleneck # In an activated conda env; otherwise, this installs in the root env`
+    4. `pip install see                    # In an activated conda env`
   4. Updates
     1. `conda update --all`
     2. `conda update conda`
