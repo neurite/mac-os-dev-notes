@@ -71,11 +71,11 @@ mac-os-x-notes
     5. `conda remove --name flowers --all`
     6. `conda env export > snowflakes.yml`
     7. `conda env create -f snowflakes.yml`
-  3. Packages
+  3. Packages (note: activate the environment before installing a package)
     1. `conda list`
     2. `conda search beautiful-soup`
-    3. `conda install -c pandas bottleneck # In an activated conda env; otherwise, this installs in the root env`
-    4. `pip install see                    # In an activated conda env`
+    3. `conda install -c pandas bottleneck`
+    4. `pip install see`
   4. Updates
     1. `conda update --all`
     2. `conda update conda`
