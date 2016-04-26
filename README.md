@@ -62,8 +62,7 @@ mac-os-x-notes
 2. Python 2.7.11 (includes pip). The commands to run are `python` and `pip` respectively.
 3. Python 3.5.1 (includes pip3). The commands to run are `python3` and `pip3` respectively.
 4. Anaconda. Conda is both a package manager and an environment manager.
-  1. `conda update conda`
-  2. Environments
+  1. Environments
     1. `conda create --name snowflakes` or `conda create --name snowflakes3 python=3`
     2. `source activate snowflakes` and `source deactivate`
     3. `conda env list`
@@ -71,12 +70,12 @@ mac-os-x-notes
     5. `conda remove --name flowers --all`
     6. `conda env export > snowflakes.yml`
     7. `conda env create -f snowflakes.yml`
-  3. Packages (note: activate the environment before installing a package)
+  2. Packages
     1. `conda list`
     2. `conda search beautiful-soup`
     3. `conda install -c pandas bottleneck`
     4. `pip install see`
-  4. Updates
+  3. Updates
     1. `conda update --all`
     2. `conda update conda`
 
