@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 MAC_NOTES_FOLDER="${HOME}/Workspace/mac-os-x-notes"
 if [ ! -r "${MAC_NOTES_FOLDER}" ]; then

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ ! -e "${HOME}/.bashrc" ]; then
     touch "${HOME}/.bashrc"
