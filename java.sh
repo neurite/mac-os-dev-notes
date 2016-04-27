@@ -36,7 +36,7 @@ if [[ ! $(grep -E 'MAVEN_HOME' "${HOME}/.bashrc") ]]; then
 fi
 
 ### gradle
-if [[ ! $() ]]; then
+if [[ ! $(grep -E 'GRADLE_HOME' "${HOME}/.bashrc") ]]; then
     cd "${HOME}/Packages"
     curl -O https://downloads.gradle.org/distributions/gradle-2.11-bin.zip
     cd
