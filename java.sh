@@ -45,14 +45,14 @@ fi
 ### gradle
 if [[ ! $(grep -E 'GRADLE_HOME' "${HOME}/.bashrc") ]]; then
     cd "${HOME}/Packages"
-    curl -O https://downloads.gradle.org/distributions/gradle-2.11-bin.zip
+    curl -O https://downloads.gradle.org/distributions/gradle-2.13-bin.zip
     cd
-    cp "${HOME}/Packages/gradle-2.11-bin.zip" "${HOME}/Applications/"
+    cp "${HOME}/Packages/gradle-2.13-bin.zip" "${HOME}/Applications/"
     cd "${HOME}/Applications"
-    unzip gradle-2.11-bin.zip
-    rm gradle-2.11-bin.zip
+    unzip gradle-2.13-bin.zip
+    rm gradle-2.13-bin.zip
     cd
     echo '# gradle' >> "${HOME}/.bashrc"
-    echo 'export GRADLE_HOME="${APPS_HOME}/gradle-2.11"' >> "${HOME}/.bashrc"
+    echo 'export GRADLE_HOME="${APPS_HOME}/gradle-2.13"' >> "${HOME}/.bashrc"
     echo 'export PATH="${PATH}:${GRADLE_HOME}/bin"' >> "${HOME}/.bashrc"
 fi
