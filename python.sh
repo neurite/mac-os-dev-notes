@@ -18,51 +18,70 @@ fi
 chmod +x "${MAC_NOTES_FOLDER}/bashrc.sh"
 "${MAC_NOTES_FOLDER}/bashrc.sh"
 
-echo '# python' >> ~/.bashrc
+### The Python section
+if [[ ! $(grep '# python' "${HOME}/.bashrc") ]]; then
+    echo '# python' >> ~/.bashrc
+fi
+
+# Check if a conda env already exists
+function check_conda_env() {
+    if [[ $(conda env list | grep -E ".+/envs/${1}$") ]]; then
+        # As bash functions cannot return values, use command substitution
+        echo "true"
+        return 0
+    fi
+    return 0
+}
 
 ### IPython
-cd
-conda create --yes --name ipython python=2
-source activate ipython
-conda install --yes --channel anaconda ipython-notebook
-source deactivate
-echo 'alias env-ipython="source activate ipython"' >> ~/.bashrc
-conda create --yes --name ipython3 python=3
-source activate ipython3
-conda install --yes --channel anaconda ipython-notebook
-source deactivate
-echo 'alias env-ipython3="source activate ipython3"' >> ~/.bashrc
+if [[ ! $(check_conda_env ipython) ]]; then
+    cd
+    conda create --yes --name ipython python=2
+    source activate ipython
+    conda install --yes --channel anaconda ipython-notebook
+    source deactivate
+    echo 'alias env-ipython="source activate ipython"' >> ~/.bashrc
+    conda create --yes --name ipython3 python=3
+    source activate ipython3
+    conda install --yes --channel anaconda ipython-notebook
+    source deactivate
+    echo 'alias env-ipython3="source activate ipython3"' >> ~/.bashrc
+fi
 
 ### The SciPy Stack
-cd
-conda create -y -n scipy --clone ipython
-source activate scipy
-conda install -y -c anaconda numpy
-conda install -y -c anaconda scipy
-conda install -y -c anaconda matplotlib
-conda install -y -c anaconda pandas
-conda install -y -c anaconda sympy
-source deactivate
-echo 'alias env-scipy="source activate scipy"' >> ~/.bashrc
-conda create -y -n scipy3 --clone ipython3
-source activate scipy3
-conda install -y -c anaconda numpy
-conda install -y -c anaconda scipy
-conda install -y -c anaconda matplotlib
-conda install -y -c anaconda pandas
-conda install -y -c anaconda sympy
-source deactivate
-echo 'alias env-scipy3="source activate scipy3"' >> ~/.bashrc
+if [[ ! $(check_conda_env scipy) ]]; then
+    cd
+    conda create -y -n scipy --clone ipython
+    source activate scipy
+    conda install -y -c anaconda numpy
+    conda install -y -c anaconda scipy
+    conda install -y -c anaconda matplotlib
+    conda install -y -c anaconda pandas
+    conda install -y -c anaconda sympy
+    source deactivate
+    echo 'alias env-scipy="source activate scipy"' >> ~/.bashrc
+    conda create -y -n scipy3 --clone ipython3
+    source activate scipy3
+    conda install -y -c anaconda numpy
+    conda install -y -c anaconda scipy
+    conda install -y -c anaconda matplotlib
+    conda install -y -c anaconda pandas
+    conda install -y -c anaconda sympy
+    source deactivate
+    echo 'alias env-scipy3="source activate scipy3"' >> ~/.bashrc
+fi
 
 ### scikit-learn
-cd
-conda create -y -n sklearn --clone scipy
-source activate sklearn
-conda install -y -c anaconda scikit-learn
-source deactivate
-echo 'alias env-sklearn="source activate sklearn"' >> ~/.bashrc
-conda create -y -n sklearn3 --clone scipy3
-source activate sklearn3
-conda install -y -c anaconda scikit-learn
-source deactivate
-echo 'alias env-sklearn3="source activate sklearn3"' >> ~/.bashrc
+if [[ ! $(check_conda_env sklearn) ]]; then
+    cd
+    conda create -y -n sklearn --clone scipy
+    source activate sklearn
+    conda install -y -c anaconda scikit-learn
+    source deactivate
+    echo 'alias env-sklearn="source activate sklearn"' >> ~/.bashrc
+    conda create -y -n sklearn3 --clone scipy3
+    source activate sklearn3
+    conda install -y -c anaconda scikit-learn
+    source deactivate
+    echo 'alias env-sklearn3="source activate sklearn3"' >> ~/.bashrc
+fi
