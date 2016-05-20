@@ -20,7 +20,7 @@ chmod +x "${MAC_NOTES_FOLDER}/bashrc.sh"
 
 ### The Python section
 if [[ ! $(grep '# python' "${HOME}/.bashrc") ]]; then
-    echo '# python' >> ~/.bashrc
+    echo '# python' >> ${HOME}/.bashrc
 fi
 
 # Check if a conda env already exists
@@ -40,12 +40,12 @@ if [[ ! $(check_conda_env ipython) ]]; then
     source activate ipython
     conda install --yes --channel anaconda ipython-notebook
     source deactivate
-    echo 'alias env-ipython="source activate ipython"' >> ~/.bashrc
+    echo 'alias env-ipython="source activate ipython"' >> ${HOME}/.bashrc
     conda create --yes --name ipython3 python=3
     source activate ipython3
     conda install --yes --channel anaconda ipython-notebook
     source deactivate
-    echo 'alias env-ipython3="source activate ipython3"' >> ~/.bashrc
+    echo 'alias env-ipython3="source activate ipython3"' >> ${HOME}/.bashrc
 fi
 
 ### The SciPy Stack
@@ -59,7 +59,7 @@ if [[ ! $(check_conda_env scipy) ]]; then
     conda install -y -c anaconda pandas
     conda install -y -c anaconda sympy
     source deactivate
-    echo 'alias env-scipy="source activate scipy"' >> ~/.bashrc
+    echo 'alias env-scipy="source activate scipy"' >> ${HOME}/.bashrc
     conda create -y -n scipy3 --clone ipython3
     source activate scipy3
     conda install -y -c anaconda numpy
@@ -68,7 +68,7 @@ if [[ ! $(check_conda_env scipy) ]]; then
     conda install -y -c anaconda pandas
     conda install -y -c anaconda sympy
     source deactivate
-    echo 'alias env-scipy3="source activate scipy3"' >> ~/.bashrc
+    echo 'alias env-scipy3="source activate scipy3"' >> ${HOME}/.bashrc
 fi
 
 ### scikit-learn
@@ -78,12 +78,12 @@ if [[ ! $(check_conda_env sklearn) ]]; then
     source activate sklearn
     conda install -y -c anaconda scikit-learn
     source deactivate
-    echo 'alias env-sklearn="source activate sklearn"' >> ~/.bashrc
+    echo 'alias env-sklearn="source activate sklearn"' >> ${HOME}/.bashrc
     conda create -y -n sklearn3 --clone scipy3
     source activate sklearn3
     conda install -y -c anaconda scikit-learn
     source deactivate
-    echo 'alias env-sklearn3="source activate sklearn3"' >> ~/.bashrc
+    echo 'alias env-sklearn3="source activate sklearn3"' >> ${HOME}/.bashrc
 fi
 
 ### scikit-image
