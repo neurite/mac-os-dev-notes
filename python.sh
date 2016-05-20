@@ -85,3 +85,20 @@ if [[ ! $(check_conda_env sklearn) ]]; then
     source deactivate
     echo 'alias env-sklearn3="source activate sklearn3"' >> ~/.bashrc
 fi
+
+### scikit-image
+if [[ ! $(check_conda_env skimage) ]]; then
+    cd
+    conda create -y -n skimage --clone sklearn
+    source activate skimage
+    conda update -y --all
+    conda install -y -c anaconda scikit-image
+    source deactivate
+    echo 'alias env-skimage="source activate skimage"' >> ${HOME}/.bashrc
+    conda create -y -n skimage3 --clone sklearn3
+    source activate skimage3
+    conda update -y --all
+    conda install -y -c anaconda scikit-image
+    source deactivate
+    echo 'alias env-skimage3="source activate skimage3"' >> ${HOME}/.bashrc
+fi
