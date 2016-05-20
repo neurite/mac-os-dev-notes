@@ -53,6 +53,7 @@ if [[ ! $(check_conda_env scipy) ]]; then
     cd
     conda create -y -n scipy --clone ipython
     source activate scipy
+    conda update -y --all
     conda install -y -c anaconda numpy
     conda install -y -c anaconda scipy
     conda install -y -c anaconda matplotlib
@@ -62,6 +63,7 @@ if [[ ! $(check_conda_env scipy) ]]; then
     echo 'alias env-scipy="source activate scipy"' >> "${HOME}/.bashrc"
     conda create -y -n scipy3 --clone ipython3
     source activate scipy3
+    conda update -y --all
     conda install -y -c anaconda numpy
     conda install -y -c anaconda scipy
     conda install -y -c anaconda matplotlib
@@ -76,11 +78,13 @@ if [[ ! $(check_conda_env sklearn) ]]; then
     cd
     conda create -y -n sklearn --clone scipy
     source activate sklearn
+    conda update -y --all
     conda install -y -c anaconda scikit-learn
     source deactivate
     echo 'alias env-sklearn="source activate sklearn"' >> "${HOME}/.bashrc"
     conda create -y -n sklearn3 --clone scipy3
     source activate sklearn3
+    conda update -y --all
     conda install -y -c anaconda scikit-learn
     source deactivate
     echo 'alias env-sklearn3="source activate sklearn3"' >> "${HOME}/.bashrc"
