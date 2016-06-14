@@ -39,11 +39,13 @@ if [[ ! $(check_conda_env ipython) ]]; then
     conda create --yes --name ipython python=2
     source activate ipython
     conda install --yes --channel anaconda ipython-notebook
+    conda install --yes --channel anaconda requests
     source deactivate
     echo 'alias env-ipython="source activate ipython"' >> "${HOME}/.bashrc"
     conda create --yes --name ipython3 python=3
     source activate ipython3
     conda install --yes --channel anaconda ipython-notebook
+    conda install --yes --channel anaconda requests
     source deactivate
     echo 'alias env-ipython3="source activate ipython3"' >> "${HOME}/.bashrc"
 fi
@@ -80,12 +82,14 @@ if [[ ! $(check_conda_env sklearn) ]]; then
     source activate sklearn
     conda update -y --all
     conda install -y -c anaconda scikit-learn
+    conda install -y -c anaconda seaborn
     source deactivate
     echo 'alias env-sklearn="source activate sklearn"' >> "${HOME}/.bashrc"
     conda create -y -n sklearn3 --clone scipy3
     source activate sklearn3
     conda update -y --all
     conda install -y -c anaconda scikit-learn
+    conda install -y -c anaconda seaborn
     source deactivate
     echo 'alias env-sklearn3="source activate sklearn3"' >> "${HOME}/.bashrc"
 fi
