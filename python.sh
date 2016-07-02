@@ -40,12 +40,14 @@ if [[ ! $(check_conda_env ipython) ]]; then
     source activate ipython
     conda install --yes --channel anaconda ipython-notebook
     conda install --yes --channel anaconda requests
+    conda install --yes --channel anaconda sqlite
     source deactivate
     echo 'alias env-ipython="source activate ipython"' >> "${HOME}/.bashrc"
     conda create --yes --name ipython3 python=3
     source activate ipython3
     conda install --yes --channel anaconda ipython-notebook
     conda install --yes --channel anaconda requests
+    conda install --yes --channel anaconda sqlite
     source deactivate
     echo 'alias env-ipython3="source activate ipython3"' >> "${HOME}/.bashrc"
 fi
