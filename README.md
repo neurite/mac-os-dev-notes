@@ -78,6 +78,10 @@ mac-os-x-notes
   3. Updates
     1. `conda update --all`
     2. `conda update conda`
+5. Python machine learning stack
+  1. `pandas`, `sqlite`: data i/o, munging
+  2. `numpy`, `scipy`, `scikit-learn`: computation, machine learning
+  3. `matplotlib`, `seaborn`: visualization
 
 ### Terminal
 
