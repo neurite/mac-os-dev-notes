@@ -50,37 +50,17 @@ if [[ ! $(check_conda_env ipython) ]]; then
     echo 'alias env-ipython3="source activate ipython3"' >> "${HOME}/.bashrc"
 fi
 
-### The SciPy Stack
-if [[ ! $(check_conda_env scipy) ]]; then
-    cd
-    conda create -y -n scipy --clone ipython
-    source activate scipy
-    conda update -y --all
-    conda install -y -c anaconda numpy
-    conda install -y -c anaconda scipy
-    conda install -y -c anaconda matplotlib
-    conda install -y -c anaconda pandas
-    conda install -y -c anaconda sympy
-    source deactivate
-    echo 'alias env-scipy="source activate scipy"' >> "${HOME}/.bashrc"
-    conda create -y -n scipy3 --clone ipython3
-    source activate scipy3
-    conda update -y --all
-    conda install -y -c anaconda numpy
-    conda install -y -c anaconda scipy
-    conda install -y -c anaconda matplotlib
-    conda install -y -c anaconda pandas
-    conda install -y -c anaconda sympy
-    source deactivate
-    echo 'alias env-scipy3="source activate scipy3"' >> "${HOME}/.bashrc"
-fi
-
 ### scikit-learn
 if [[ ! $(check_conda_env sklearn) ]]; then
     cd
     conda create -y -n sklearn --clone scipy
     source activate sklearn
     conda update -y --all
+    conda install -y -c anaconda numpy
+    conda install -y -c anaconda scipy
+    conda install -y -c anaconda matplotlib
+    conda install -y -c anaconda pandas
+    conda install -y -c anaconda sympy
     conda install -y -c anaconda scikit-learn
     conda install -y -c anaconda seaborn
     source deactivate
@@ -88,6 +68,11 @@ if [[ ! $(check_conda_env sklearn) ]]; then
     conda create -y -n sklearn3 --clone scipy3
     source activate sklearn3
     conda update -y --all
+    conda install -y -c anaconda numpy
+    conda install -y -c anaconda scipy
+    conda install -y -c anaconda matplotlib
+    conda install -y -c anaconda pandas
+    conda install -y -c anaconda sympy
     conda install -y -c anaconda scikit-learn
     conda install -y -c anaconda seaborn
     source deactivate
