@@ -10,10 +10,12 @@ mac-os-x-notes
   1. System Preferences... --> Tackpad
   2. System Preferences... --> Desktop
   3. System Preferences... --> Dock
-  4. System Preferences... --> Security & Privacy --> Firewall
-  5. Finder --> Preferences...
-  6. Safari
-  7. Chrome
+  4. System Preferences... --> Security & Privacy --> General --> Require password immediately
+  5. System Preferences... --> Security & Privacy --> General --> Advanced --> Logout, Require admin password
+  6. System Preferences... --> Security & Privacy --> FileVault, Firewall
+  7. Finder --> Preferences...
+  8. Safari
+  9. Chrome
 6. Install:
   1. Xcode Command-Line Tools
   2. VirtualBox
@@ -32,7 +34,7 @@ When powering up
 * Hold down Command-S for single-user mode.
 * Hold down Command-V for verbose mode.
 
-To disable single-user mode, enter the recovery mode and set a firmware password. Note make sure to never forget the firmware password.
+To disable single-user mode, enter the recovery mode and set a firmware password. *Make sure to never forget the firmware password.*
 
 ### Java
 
