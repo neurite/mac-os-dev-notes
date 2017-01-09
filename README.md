@@ -23,6 +23,16 @@ mac-os-x-notes
     2. Docker Machine
     3. Docker Compose
   5. Anonymous Pro, Cousine, Droid Sans, Droid Sans Mono, Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
+  
+### Startup Modes
+
+When powering up
+
+* Hold down Command-R for recovery mode.
+* Hold down Command-S for single-user mode.
+* Hold down Command-V for verbose mode.
+
+To disable single-user mode, enter the recovery mode and set a firmware password. Note make sure to never forget the firmware password.
 
 ### Java
 
