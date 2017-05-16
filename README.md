@@ -7,25 +7,25 @@ mac-os-x-notes
 2. Hold down the Option key when booting up.
 3. Install the OS and then update. Note format the partition as `Mac OS Extended, Journaled`.
 5. Customize:
-  1. System Preferences... --> Tackpad
-  2. System Preferences... --> Desktop
-  3. System Preferences... --> Dock
-  4. System Preferences... --> Security & Privacy --> General --> Require password immediately
-  5. System Preferences... --> Security & Privacy --> General --> Advanced --> Logout, Require admin password
-  6. System Preferences... --> Security & Privacy --> FileVault, Firewall
-  7. Finder --> Preferences...
-  8. Safari
-  9. Chrome
+    1. System Preferences... --> Tackpad
+    2. System Preferences... --> Desktop
+    3. System Preferences... --> Dock
+    4. System Preferences... --> Security & Privacy --> General --> Require password immediately
+    5. System Preferences... --> Security & Privacy --> General --> Advanced --> Logout, Require admin password
+    6. System Preferences... --> Security & Privacy --> FileVault, Firewall
+    7. Finder --> Preferences...
+    8. Safari
+    9. Chrome
 6. Install:
-  1. Xcode Command-Line Tools
-  2. VirtualBox
-  3. Vagrant
-  4. Docker Custom Install
-    1. Docker Client
-    2. Docker Machine
-    3. Docker Compose
-  5. Anonymous Pro, Cousine, Droid Sans, Droid Sans Mono, Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
-  
+    1. Xcode Command-Line Tools
+    2. VirtualBox
+    3. Vagrant
+    4. Docker Custom Install (TODO: The docker install)
+        1. Docker Client
+        2. Docker Machine
+        3. Docker Compose
+    5. Anonymous Pro, Cousine, Droid Sans, Droid Sans Mono, Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
+
 ### Startup Modes
 
 When powering up
@@ -74,26 +74,29 @@ To disable single-user mode, enter the recovery mode and set a firmware password
 2. Python 2.7.11 (includes pip). The commands to run are `python` and `pip` respectively.
 3. Python 3.5.1 (includes pip3). The commands to run are `python3` and `pip3` respectively.
 4. Anaconda. Conda is both a package manager and an environment manager.
-  1. Environments
-    1. `conda create --name snowflakes` or `conda create --name snowflakes3 python=3`
-    2. `source activate snowflakes` and `source deactivate`
-    3. `conda env list`
-    4. `conda create --name flowers --clone snowflakes`
-    5. `conda remove --name flowers --all`
-    6. `conda env export > snowflakes.yml` (which include a section of pip dependencies)
-    7. `conda env create -f snowflakes.yml`
-  2. Packages
-    1. `conda list`
-    2. `conda search beautiful-soup`
-    3. `conda install -c anaconda bottleneck` (install from a specific channel)
-    4. `pip install see` (run pip inside the activated environment)
-  3. Updates
-    1. `conda update --all`
-    2. `conda update conda`
+    1. Environments
+        1. `conda create --name snowflakes` or `conda create --name snowflakes3 python=3`
+        2. `source activate snowflakes` and `source deactivate`
+        3. `conda env list`
+        4. `conda create --name flowers --clone snowflakes`
+        5. `conda remove --name flowers --all`
+        6. `conda env export > snowflakes.yml` (which include a section of pip dependencies)
+        7. `conda env create -f snowflakes.yml`
+    2. Packages
+        1. `conda list`
+        2. `conda search beautiful-soup`
+        3. `conda install -c anaconda bottleneck` (install from a specific channel)
+        4. `pip install see` (run pip inside the activated environment)
+    3. Updates
+        1. `conda update --all`
+        2. `conda update conda`
 5. Python machine learning stack
-  1. `pandas`, `sqlite`: data i/o, munging
-  2. `numpy`, `scipy`, `scikit-learn`: computation, machine learning
-  3. `matplotlib`, `seaborn`: visualization
+    1. `pandas`, `sqlite`: data i/o, munging
+    2. `numpy`, `scipy`, `scikit-learn`: computation, machine learning
+    3. `matplotlib`, `seaborn`: visualization
+6. Specialties
+    1. `scikit-image`: image analysis
+    2. `gensim`: semantic analysis, topics
 
 ### Terminal
 
