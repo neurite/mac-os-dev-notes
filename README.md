@@ -97,6 +97,7 @@ To disable single-user mode, enter the recovery mode and set a firmware password
 6. Specialties
     1. `scikit-image`: image analysis
     2. `gensim`: semantic analysis, topics
+    3. `beautifulsoup4`: web page scraping
 
 ### Terminal
 
