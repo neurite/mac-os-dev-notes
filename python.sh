@@ -33,52 +33,32 @@ function check_conda_env() {
     return 0
 }
 
-### IPython
+### ipython (or jupyter)
 if [[ ! $(check_conda_env ipython) ]]; then
     cd
-    conda create --yes --name ipython python=2
+    conda create --yes --name ipython python=3
     source activate ipython
-    conda install --yes --channel anaconda ipython-notebook
-    conda install --yes --channel anaconda requests
-    conda install --yes --channel anaconda sqlite
+    conda install --yes ipython-notebook
+    conda install --yes requests
+    conda install --yes sqlite
     source deactivate
     echo 'alias env-ipython="source activate ipython"' >> "${HOME}/.bashrc"
-    conda create --yes --name ipython3 python=3
-    source activate ipython3
-    conda install --yes --channel anaconda ipython-notebook
-    conda install --yes --channel anaconda requests
-    conda install --yes --channel anaconda sqlite
-    source deactivate
-    echo 'alias env-ipython3="source activate ipython3"' >> "${HOME}/.bashrc"
 fi
 
 ### scikit-learn
 if [[ ! $(check_conda_env sklearn) ]]; then
     cd
-    conda create -y -n sklearn --clone scipy
+    conda create -y -n sklearn --clone ipython
     source activate sklearn
-    conda update -y --all
-    conda install -y -c anaconda numpy
-    conda install -y -c anaconda scipy
-    conda install -y -c anaconda matplotlib
-    conda install -y -c anaconda pandas
-    conda install -y -c anaconda sympy
-    conda install -y -c anaconda scikit-learn
-    conda install -y -c anaconda seaborn
+    conda install -y numpy
+    conda install -y scipy
+    conda install -y matplotlib
+    conda install -y pandas
+    conda install -y sympy
+    conda install -y scikit-learn
+    conda install -y seaborn
     source deactivate
     echo 'alias env-sklearn="source activate sklearn"' >> "${HOME}/.bashrc"
-    conda create -y -n sklearn3 --clone scipy3
-    source activate sklearn3
-    conda update -y --all
-    conda install -y -c anaconda numpy
-    conda install -y -c anaconda scipy
-    conda install -y -c anaconda matplotlib
-    conda install -y -c anaconda pandas
-    conda install -y -c anaconda sympy
-    conda install -y -c anaconda scikit-learn
-    conda install -y -c anaconda seaborn
-    source deactivate
-    echo 'alias env-sklearn3="source activate sklearn3"' >> "${HOME}/.bashrc"
 fi
 
 ### scikit-image
@@ -86,14 +66,7 @@ if [[ ! $(check_conda_env skimage) ]]; then
     cd
     conda create -y -n skimage --clone sklearn
     source activate skimage
-    conda update -y --all
-    conda install -y -c anaconda scikit-image
+    conda install -y scikit-image
     source deactivate
     echo 'alias env-skimage="source activate skimage"' >> "${HOME}/.bashrc"
-    conda create -y -n skimage3 --clone sklearn3
-    source activate skimage3
-    conda update -y --all
-    conda install -y -c anaconda scikit-image
-    source deactivate
-    echo 'alias env-skimage3="source activate skimage3"' >> "${HOME}/.bashrc"
 fi
