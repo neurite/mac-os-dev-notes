@@ -6,7 +6,7 @@ mac-os-x-notes
 1. Prepare [a bootable USB disk of El Capitan](https://www.google.com/search?q=bootable+USB+El+Capitan).
 2. Hold down the Option key when booting up.
 3. Install the OS and then update. Note format the partition as `Mac OS Extended, Journaled`.
-5. Customize:
+4. Customize:
     1. System Preferences... --> Tackpad
     2. System Preferences... --> Desktop
     3. System Preferences... --> Dock
@@ -16,16 +16,15 @@ mac-os-x-notes
     7. Finder --> Preferences...
     8. Safari
     9. Chrome
-6. Install:
+5. Install:
     1. Xcode Command-Line Tools
     2. VirtualBox
-    3. Vagrant
-    4. Docker Custom Install (TODO: The docker install)
+    3. Docker Custom Install (TODO: The docker install)
         1. Docker Client
         2. Docker Machine
         3. Docker Compose
-    5. Anonymous Pro, Cousine, Droid Sans, Droid Sans Mono, Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
-    6. Text editors: [Atom](https://atom.io/), [Visual Studio Code](https://code.visualstudio.com/). Note both can run locally from `~/Applications`.
+    4. Anonymous Pro, Cousine, Droid Sans, Droid Sans Mono, Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
+    5. Text editors: [Atom](https://atom.io/), [Visual Studio Code](https://code.visualstudio.com/). Note both can run locally from `~/Applications`.
 
 ### Startup Modes
 
@@ -92,11 +91,11 @@ To disable single-user mode, enter the recovery mode and set a firmware password
     3. Updates
         1. `conda update --all`
         2. `conda update conda`
-5. Python machine learning stack
+3. Python machine learning stack
     1. `pandas`, `sqlite`: data i/o, munging
     2. `numpy`, `scipy`, `scikit-learn`: computation, machine learning
     3. `matplotlib`, `seaborn`: visualization
-6. Specialties
+4. Specialties
     1. `scikit-image`: image analysis
     2. `gensim`: semantic analysis, topics
     3. `beautifulsoup4`: web page scraping
