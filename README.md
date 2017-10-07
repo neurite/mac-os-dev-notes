@@ -25,6 +25,7 @@ mac-os-x-notes
         2. Docker Machine
         3. Docker Compose
     5. Anonymous Pro, Cousine, Droid Sans, Droid Sans Mono, Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
+    6. Text editors: [Atom](https://atom.io/), [Visual Studio Code](https://code.visualstudio.com/). Note both can run locally from `~/Applications`.
 
 ### Startup Modes
 
@@ -70,10 +71,11 @@ To disable single-user mode, enter the recovery mode and set a firmware password
 
 ### Python
 
-1. ActiveTcl 8.5.18.0 (See [IDLE and tkinter with Tcl/Tk on Mac OS X](https://www.python.org/download/mac/tcltk/)).
-2. Python 2.7.11 (includes pip). The commands to run are `python` and `pip` respectively.
-3. Python 3.5.1 (includes pip3). The commands to run are `python3` and `pip3` respectively.
-4. Anaconda. Conda is both a package manager and an environment manager.
+1. OS Python (or let conda manages Python for you)
+    1. ActiveTcl 8.5.18.0 (See [IDLE and tkinter with Tcl/Tk on Mac OS X](https://www.python.org/download/mac/tcltk/)).
+    2. Python 2.7.14 (includes pip). The commands to run are `python` and `pip` respectively.
+    3. Python 3.6.3 (includes pip3). The commands to run are `python3` and `pip3` respectively.
+2. Conda (recommended over the OS Python)
     1. Environments
         1. `conda create --name snowflakes` or `conda create --name snowflakes3 python=3`
         2. `source activate snowflakes` and `source deactivate`
@@ -98,6 +100,7 @@ To disable single-user mode, enter the recovery mode and set a firmware password
     1. `scikit-image`: image analysis
     2. `gensim`: semantic analysis, topics
     3. `beautifulsoup4`: web page scraping
+    4. `scrapy`: web crawling
 
 ### Terminal
 
