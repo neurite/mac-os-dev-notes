@@ -1,6 +1,11 @@
 syntax on
+
 set background=dark
-filetype plugin indent on
+
+if has("autocmd")
+  filetype plugin indent on
+endif
+
 set showcmd
 set showmatch
 set ignorecase
@@ -9,8 +14,14 @@ set incsearch
 set autowrite
 set hidden
 set mouse=a
+
+set autoindent nosmartindent
+
+set smarttab
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
 set number
 set ruler
-set tabstop=4
-set shiftwidth=4
-set expandtab
