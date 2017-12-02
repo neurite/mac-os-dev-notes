@@ -36,6 +36,19 @@ When powering up
 
 To disable single-user mode, enter the recovery mode and set a firmware password. *Make sure to never forget the firmware password.*
 
+### vim
+
+1. `vim --version` and look for "Huge version without GUI" and "+python3"
+2. `git clone https://github.com/vim/vim.git`
+3. `cd vim`
+4. `vim src/Makefile` and uncomment the following:
+    1. `CONF_OPT_PYTHON3 = --enable-python3interp=dynamic`
+    2. `CONF_OPT_NETBEANS = --disable-netbeans`
+5. `make`
+6. Then copy `src/vim` to `~/Applications/vim/bin`
+7. Add it to `$PATH` in `.bashrc`
+
+
 ### Java
 
 1. Download and install [Oracle Java JDK](https://www.oracle.com/technetwork/java/javase/downloads/). Java virtual machines are installed at `/Library/Java/JavaVirtualMachines`.
