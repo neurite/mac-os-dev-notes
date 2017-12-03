@@ -47,6 +47,9 @@ To disable single-user mode, enter the recovery mode and set a firmware password
 7. `make`
 8. Copy `src/vim` to `~/Applications/vim/bin`
 9. Add it to `$PATH` in `~/.bashrc`. Remember to uncomment the miniconda python in `~/.bashrc`
+10. Make a directory `sudo mkdir /usr/local/share/vim`
+11. Copy everything system vim there `sudo cp -r /usr/share/vim/vim73/* /usr/local/share/vim/`
+12. May also need the file `rgb.txt` in `/usr/local/share/vim/`. The file can be found online
 
 
 ### Java
