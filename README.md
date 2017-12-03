@@ -38,15 +38,15 @@ To disable single-user mode, enter the recovery mode and set a firmware password
 
 ### vim
 
-1. `vim --version` and look for "Huge version without GUI" and "+python3"
-2. `git clone https://github.com/vim/vim.git`
-3. `cd vim`
-4. `vim src/Makefile` and uncomment the following:
-    1. `CONF_OPT_PYTHON3 = --enable-python3interp=dynamic`
-    2. `CONF_OPT_NETBEANS = --disable-netbeans`
-5. `make`
-6. Then copy `src/vim` to `~/Applications/vim/bin`
-7. Add it to `$PATH` in `.bashrc`
+1. Make sure the Xcode Command-Line Tools are installed
+2. Check the current vim version `vim --version`. The target is to add Python 3 support "+python3"
+3. Note that the conda python is not compatible with the vim build. Remove it temporarilty from '.bashrc'. Make sure that `python3` points to the system python
+4. `git clone https://github.com/vim/vim.git`
+5. `cd vim`
+6. `./configure --enable-python3interp --disable-netbeans`
+7. `make`
+8. Copy `src/vim` to `~/Applications/vim/bin`
+9. Add it to `$PATH` in `~/.bashrc`. Remember to uncomment the miniconda python in `~/.bashrc`
 
 
 ### Java
