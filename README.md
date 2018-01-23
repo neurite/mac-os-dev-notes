@@ -122,7 +122,7 @@ By default the Mac OS terminal is a login shell (`/usr/bin/login`). The login sh
 
 Visual profile:
 
-* Background: opacity 85%, blur 5%
+* Background: opacity 85%, blur 0%
 * Font: Source Code Pro 18 pt
 * Text: Antialias
 
