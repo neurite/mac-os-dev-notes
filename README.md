@@ -51,7 +51,6 @@ To disable single-user mode, enter the recovery mode and set a firmware password
 11. Copy everything system vim there `sudo cp -r /usr/share/vim/vim73/* /usr/local/share/vim/`
 12. May also need the file `rgb.txt` in `/usr/local/share/vim/`. The file can be found online
 
-
 ### Java
 
 1. Download and install [Oracle Java JDK](https://www.oracle.com/technetwork/java/javase/downloads/). Java virtual machines are installed at `/Library/Java/JavaVirtualMachines`.
@@ -120,3 +119,10 @@ To disable single-user mode, enter the recovery mode and set a firmware password
 ### Terminal
 
 By default the Mac OS terminal is a login shell (`/usr/bin/login`). The login shell executes `~/.bash_profile`. Note that it does not execute `~/.bashrc`. We either use `~/.bash_profile` directly or `source ~/.bashrc` in `~/.bash_profile`. We can also make the terminal a non-login shell (`/bin/bash`).
+
+Visual profile:
+
+* Background: opacity 85%, blur 5%
+* Font: Source Code Pro 18 pt
+* Text: Antialias
+
