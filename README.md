@@ -19,12 +19,8 @@ mac-os-x-notes
 5. Install:
     1. Xcode Command-Line Tools
     2. VirtualBox
-    3. Docker Custom Install (TODO: The docker install)
-        1. Docker Client
-        2. Docker Machine
-        3. Docker Compose
-    4. Anonymous Pro, Cousine, Droid Sans, Droid Sans Mono, Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
-    5. Text editors: [Atom](https://atom.io/), [Visual Studio Code](https://code.visualstudio.com/). Note both can run locally from `~/Applications`.
+    3. Anonymous Pro, Cousine, Droid Sans, Droid Sans Mono, Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
+    4. Text editors: [Atom](https://atom.io/), [Visual Studio Code](https://code.visualstudio.com/). Note both can run locally from `~/Applications`.
 
 ### Startup Modes
 
@@ -36,20 +32,29 @@ When powering up
 
 To disable single-user mode, enter the recovery mode and set a firmware password. *Make sure to never forget the firmware password.*
 
+### Terminal
+
+By default the Mac OS terminal is a login shell (`/usr/bin/login`). The login shell executes `~/.bash_profile`. Note that it does not execute `~/.bashrc`. We either use `~/.bash_profile` directly or `source ~/.bashrc` in `~/.bash_profile`. We can also make the terminal a non-login shell (`/bin/bash`).
+
+Visual profile:
+
+* Background: opacity 85%, blur 0%
+* Font: Source Code Pro 18 pt
+* Text: Antialias
+
 ### vim
 
 1. Make sure the Xcode Command-Line Tools are installed
 2. Check the current vim version `vim --version`. The target is to add Python 3 support "+python3"
-3. Note that the conda python is not compatible with the vim build. Remove it temporarilty from '.bashrc'. Make sure that `python3` points to the system python
-4. `git clone https://github.com/vim/vim.git`
-5. `cd vim`
-6. `./configure --enable-python3interp --disable-netbeans`
-7. `make`
-8. Copy `src/vim` to `~/Applications/vim/bin`
-9. Add it to `$PATH` in `~/.bashrc`. Remember to uncomment the miniconda python in `~/.bashrc`
-10. Make a directory `sudo mkdir /usr/local/share/vim`
-11. Copy everything system vim there `sudo cp -r /usr/share/vim/vim73/* /usr/local/share/vim/`
-12. May also need the file `rgb.txt` in `/usr/local/share/vim/`. The file can be found online
+3. `git clone https://github.com/vim/vim.git`
+4. `cd vim`
+5. `./configure --enable-python3interp --disable-netbeans`
+6. `make`
+7. Copy `src/vim` to `~/Applications/vim/bin`
+8. Add it to `$PATH` in `~/.bashrc`.
+9. Make a directory `sudo mkdir /usr/local/share/vim`
+10. Copy everything system vim there `sudo cp -r /usr/share/vim/vim73/* /usr/local/share/vim/`
+11. May also need the file `rgb.txt` in `/usr/local/share/vim/`. The file can be found online
 
 ### Java
 
@@ -82,47 +87,3 @@ To disable single-user mode, enter the recovery mode and set a firmware password
   ```
 
 5. Download and install Eclipse.
-
-### Python
-
-1. OS Python (or let conda manages Python for you)
-    1. ActiveTcl 8.5.18.0 (See [IDLE and tkinter with Tcl/Tk on Mac OS X](https://www.python.org/download/mac/tcltk/)).
-    2. Python 2.7.14 (includes pip). The commands to run are `python` and `pip` respectively.
-    3. Python 3.6.3 (includes pip3). The commands to run are `python3` and `pip3` respectively.
-2. Conda (recommended over the OS Python)
-    1. Environments
-        1. `conda create --name snowflakes` or `conda create --name snowflakes3 python=3`
-        2. `source activate snowflakes` and `source deactivate`
-        3. `conda env list`
-        4. `conda create --name flowers --clone snowflakes`
-        5. `conda remove --name flowers --all`
-        6. `conda env export > snowflakes.yml` (which include a section of pip dependencies)
-        7. `conda env create -f snowflakes.yml`
-    2. Packages
-        1. `conda list`
-        2. `conda search beautiful-soup`
-        3. `conda install -c anaconda bottleneck` (install from a specific channel)
-        4. `pip install see` (run pip inside the activated environment)
-    3. Updates
-        1. `conda update --all`
-        2. `conda update conda`
-3. Python machine learning stack
-    1. `pandas`, `sqlite`: data i/o, munging
-    2. `numpy`, `scipy`, `scikit-learn`: computation, machine learning
-    3. `matplotlib`, `seaborn`: visualization
-4. Specialties
-    1. `scikit-image`: image analysis
-    2. `gensim`: semantic analysis, topics
-    3. `beautifulsoup4`: web page scraping
-    4. `scrapy`: web crawling
-
-### Terminal
-
-By default the Mac OS terminal is a login shell (`/usr/bin/login`). The login shell executes `~/.bash_profile`. Note that it does not execute `~/.bashrc`. We either use `~/.bash_profile` directly or `source ~/.bashrc` in `~/.bash_profile`. We can also make the terminal a non-login shell (`/bin/bash`).
-
-Visual profile:
-
-* Background: opacity 85%, blur 0%
-* Font: Source Code Pro 18 pt
-* Text: Antialias
-
