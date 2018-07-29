@@ -20,10 +20,10 @@ mac-os-x-notes
     1. Xcode Command-Line Tools
     2. VirtualBox
     3. Anonymous Pro, Cousine, Droid Sans, Droid Sans Mono, Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
-    4. [Miniconda](https://conda.io/miniconda.html).
-    5. [Atom](https://atom.io/). Can run locally from `~/Applications`.
-    6. [PyCharm CE](https://www.jetbrains.com/pycharm/). 
-    7. [Visual Studio Code](https://code.visualstudio.com/). Can run locally from `~/Applications`.
+    4. [Miniconda](https://conda.io/miniconda.html)
+    5. [Atom](https://atom.io/), can run locally from `~/Applications`
+    6. [PyCharm CE](https://www.jetbrains.com/pycharm/)
+    7. [Visual Studio Code](https://code.visualstudio.com/), can run locally from `~/Applications`
 
 ### Startup Modes
 
