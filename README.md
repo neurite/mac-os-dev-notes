@@ -33,7 +33,7 @@ When powering up
 * Hold down Command-S for single-user mode.
 * Hold down Command-V for verbose mode.
 
-To disable single-user mode, enter the recovery mode and set a firmware password. *Make sure to never forget the firmware password.*
+To disable single-user mode, enter the recovery mode. In the "macOS Utilities" window, choose "Utilities" then "Startup Security Utility", and set a firmware password. *Make sure to never forget the firmware password.*
 
 ### Terminal
 
