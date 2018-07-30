@@ -47,11 +47,11 @@ Visual profile:
 
 ### vim
 
-Run `vim --version` should see "-python3", the target is to add Python 3 support "+python3".
+Run `vim --version` should see "-python3", the target is to add Python 3 support so that "+python3".
 
 Befroe we proceed, make sure the Xcode Command-Line Tools are installed.
 
-The source code of `vim` is checked out into `~/Downloads` and is compiled there. The compiled code is deployed to `~/Applications`. Here are the steps:
+The source code of `vim` is checked out into `~/Downloads` and is compiled there. The compiled code is deployed to `~/Applications`. The `vim` in `~/Downloads` is zipped and moved to `~/Packages`. Here are the steps:
 
 1. `cd ~/Downloads`
 2. `git clone https://github.com/vim/vim.git`
