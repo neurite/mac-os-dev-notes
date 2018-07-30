@@ -21,7 +21,7 @@ mac-os-x-notes
     2. VirtualBox
     3. Anonymous Pro, Cousine, Droid Sans, Droid Sans Mono, Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
     4. [Miniconda](https://conda.io/miniconda.html)
-    5. [Atom](https://atom.io/), can run locally from `~/Applications`
+    5. [Atom](https://atom.io/), the unzipped app can run locally from `~/Applications`
     6. [PyCharm CE](https://www.jetbrains.com/pycharm/)
     7. [Visual Studio Code](https://code.visualstudio.com/), can run locally from `~/Applications`
 
@@ -47,17 +47,22 @@ Visual profile:
 
 ### vim
 
-1. Make sure the Xcode Command-Line Tools are installed
-2. Check the current vim version `vim --version`. The target is to add Python 3 support "+python3"
-3. `git clone https://github.com/vim/vim.git`
-4. `cd vim`
-5. `./configure --enable-python3interp --disable-netbeans`
-6. `make`
-7. Copy `src/vim` to `~/Applications/vim/bin`
-8. Add it to `$PATH` in `~/.bashrc`.
-9. Make a directory `sudo mkdir /usr/local/share/vim`
-10. Copy everything system vim there `sudo cp -r /usr/share/vim/vim73/* /usr/local/share/vim/`
-11. May also need the file `rgb.txt` in `/usr/local/share/vim/`. The file can be found online
+Run `vim --version` should see "-python3", the target is to add Python 3 support "+python3".
+
+Befroe we proceed, make sure the Xcode Command-Line Tools are installed.
+
+The source code of `vim` is checked out into `~/Downloads` and is compiled there. The compiled code is deployed to `~/Applications`. Here are the steps:
+
+1. `cd ~/Downloads`
+2. `git clone https://github.com/vim/vim.git`
+3. `cd vim`
+4. `./configure --enable-python3interp --disable-netbeans`
+5. `make`
+6. Copy `src/vim` to `~/Applications/vim/bin`
+7. Add it to `$PATH` in `~/.bashrc`.
+8. Make a directory `sudo mkdir /usr/local/share/vim`
+9. Copy everything system vim there `sudo cp -r /usr/share/vim/vim73/* /usr/local/share/vim/`
+10. May also need the file `rgb.txt` in `/usr/local/share/vim/`. The file can be found online
 
 ### Java
 
