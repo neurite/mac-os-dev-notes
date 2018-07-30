@@ -63,7 +63,8 @@ The source code of `vim` is checked out into `~/Downloads` and is compiled there
 8. Copy the `~/.vimrc` file
 9. Make a directory `sudo mkdir -p /usr/local/share/vim`
 10. Copy everything system vim there `sudo cp -r /usr/share/vim/vim73/* /usr/local/share/vim/`. Note `vm73` is the version of your vim executable
-11. May also need the file `rgb.txt` in `/usr/local/share/vim/`. The file can be found [online](https://github.com/vim/vim/blob/master/runtime/rgb.txt)
+11. The file `/usr/local/share/vim/rgb.txt` is needed to show colors. The file can be found [online](https://github.com/vim/vim/blob/master/runtime/rgb.txt). Copy it from the checked out repository `sudo cp Downloads/vim/runtime/rgb.txt /usr/local/share/vim/`
+12. Zip `~/Downloads/vim` and save it in `~/Packages`
 
 ### Java
 
