@@ -1,4 +1,4 @@
-mac-os-x-notes
+mac-os-dev-notes
 ==============
 
 ### Mac OS X El Capitan
