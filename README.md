@@ -1,14 +1,34 @@
 mac-os-dev-notes
 ==============
 
-### Mac OS X El Capitan
+### Clean Install
 
-1. Prepare [a bootable USB disk of MacOS](https://www.google.com/search?q=bootable+USB+MacOS).
-    1. [Download MacOS](https://support.apple.com/en-us/HT211683)
-    2. [Create a bootable installer for MacOS](https://support.apple.com/en-us/HT201372) 
-3. Hold down the Option key when booting up.
-4. Install the OS and then update. Note format the partition as `Mac OS Extended, Journaled`.
-5. Customize:
+1. Prepare [a bootable USB disk of MacOS](https://www.google.com/search?q=bootable+USB+MacOS)
+    1. [Create a bootable installer for MacOS](https://support.apple.com/en-us/HT201372)
+    2. [Download MacOS](https://support.apple.com/en-us/HT211683)
+2. Hold down the Option key when booting up.
+3. Install the OS and then update. Note format the partition as `Mac OS Extended, Journaled`.
+
+### Customize
+
+* Appearance
+    * Appearance --> Dark
+    * Show scroll bars --> Always
+* Dock
+    * Position on screen --> Left
+    * Automactically hide and show -- On
+    * Show recent applications in dock --> Off
+* Keyboard
+    * Text input
+        * Correct spelling --> Disable
+        * Capitalize words --> Disable
+        * Add period with double space --> Disable
+        * Use smart quotes and dashes --> Disable
+        * Use " for double quote
+        * Use ' for single quote
+* Trackpad
+    * Tap to click
+
     1. System Preferences... --> Tackpad
     2. System Preferences... --> Desktop
     3. System Preferences... --> Dock
@@ -19,7 +39,7 @@ mac-os-dev-notes
     8. Safari
     9. Chrome
     10. Firefox
-6. Install:
+7. Install:
     1. Xcode Command-Line Tools
     3. Anonymous Pro, Cousine, Droid Sans, Droid Sans Mono, Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
     4. [Miniconda](https://conda.io/miniconda.html)
