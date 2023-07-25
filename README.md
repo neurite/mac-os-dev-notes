@@ -3,10 +3,12 @@ mac-os-dev-notes
 
 ### Mac OS X El Capitan
 
-1. Prepare [a bootable USB disk of El Capitan](https://www.google.com/search?q=bootable+USB+El+Capitan).
-2. Hold down the Option key when booting up.
-3. Install the OS and then update. Note format the partition as `Mac OS Extended, Journaled`.
-4. Customize:
+1. Prepare [a bootable USB disk of MacOS](https://www.google.com/search?q=bootable+USB+MacOS).
+    1. [Download MacOS](https://support.apple.com/en-us/HT211683)
+    2. [Create a bootable installer for MacOS](https://support.apple.com/en-us/HT201372) 
+3. Hold down the Option key when booting up.
+4. Install the OS and then update. Note format the partition as `Mac OS Extended, Journaled`.
+5. Customize:
     1. System Preferences... --> Tackpad
     2. System Preferences... --> Desktop
     3. System Preferences... --> Dock
@@ -16,9 +18,9 @@ mac-os-dev-notes
     7. Finder --> Preferences...
     8. Safari
     9. Chrome
-5. Install:
+    10. Firefox
+6. Install:
     1. Xcode Command-Line Tools
-    2. VirtualBox
     3. Anonymous Pro, Cousine, Droid Sans, Droid Sans Mono, Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
     4. [Miniconda](https://conda.io/miniconda.html)
     5. [Atom](https://atom.io/), the unzipped app can run locally from `~/Applications`
