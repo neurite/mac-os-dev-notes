@@ -1,7 +1,7 @@
 mac-os-dev-notes
-==============
+================
 
-### Clean Install
+### MacOS Clean Install
 
 1. Prepare [a bootable USB disk of MacOS](https://www.google.com/search?q=bootable+USB+MacOS)
     1. [Create a bootable installer for MacOS](https://support.apple.com/en-us/HT201372)
@@ -16,8 +16,10 @@ mac-os-dev-notes
     * Show scroll bars --> Always
 * Dock
     * Position on screen --> Left
-    * Automactically hide and show -- On
-    * Show recent applications in dock --> Off
+    * Automactically hide and show -- Enable
+    * Show recent applications in dock --> Disable
+* Desktop & Dock
+    * Hot Corners --> Disable all
 * Keyboard
     * Text input
         * Correct spelling --> Disable
@@ -28,24 +30,26 @@ mac-os-dev-notes
         * Use ' for single quote
 * Trackpad
     * Tap to click
+* Network
+    * Firewall --> Enable
+* Siri --> Diable
+* Spotlight --> Only "Applications" and "System Settings"
+* Control Center
+    * Battery --> Show percentage
+    * Digital clock --> 24-hour clock
+* Security & Privacy
+    * FileVault --> Enable
+* Finder --> Settings...
 
-    1. System Preferences... --> Tackpad
-    2. System Preferences... --> Desktop
-    3. System Preferences... --> Dock
-    4. System Preferences... --> Security & Privacy --> General --> Require password immediately
-    5. System Preferences... --> Security & Privacy --> General --> Advanced --> Logout, Require admin password
-    6. System Preferences... --> Security & Privacy --> FileVault, Firewall
-    7. Finder --> Preferences...
-    8. Safari
-    9. Chrome
-    10. Firefox
-7. Install:
-    1. Xcode Command-Line Tools
-    3. Anonymous Pro, Cousine, Droid Sans, Droid Sans Mono, Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
-    4. [Miniconda](https://conda.io/miniconda.html)
-    5. [Atom](https://atom.io/), the unzipped app can run locally from `~/Applications`
-    6. [PyCharm CE](https://www.jetbrains.com/pycharm/)
-    7. [Visual Studio Code](https://code.visualstudio.com/), can run locally from `~/Applications`
+### Install
+
+1. Chrome
+2. Firefox
+3. Xcode Command-Line Tools
+4. Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
+5. [Miniconda](https://conda.io/miniconda.html)
+6. [PyCharm CE](https://www.jetbrains.com/pycharm/)
+7. [Visual Studio Code](https://code.visualstudio.com/), can run locally from `~/Applications`
 
 ### Startup Modes
 
