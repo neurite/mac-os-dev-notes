@@ -50,10 +50,15 @@ mac-os-dev-notes
    2. Verify with `xcode-select -p` or `gcc --version`
 2. Chrome
 3. Firefox
-4. Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
-5. [Miniconda](https://conda.io/miniconda.html)
-6. [PyCharm CE](https://www.jetbrains.com/pycharm/)
-7. [Visual Studio Code](https://code.visualstudio.com/), can run locally from `~/Applications`
+   1. Settings...
+   2. Always check default browser --> Disable
+   3. Language and Appearance --> Dark
+   4. Privacy & Security - Passwords - Ask to save passwords --> Disable
+   5. Privacy & Security - Autofill --> Disable
+5. Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
+6. [Miniconda](https://conda.io/miniconda.html)
+7. [PyCharm CE](https://www.jetbrains.com/pycharm/)
+8. [Visual Studio Code](https://code.visualstudio.com/), can run locally from `~/Applications`
 
 ### Startup Modes
 
