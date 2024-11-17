@@ -20,10 +20,10 @@ mac-os-dev-notes
     * Dock
         * Position on screen --> Left
         * Automactically hide and show -- Enable
-        * Show recent applications in dock --> Disable
+        * Show suggested and recent apps in dock --> Disable
     * Hot Corners --> Disable all
 * Keyboard
-    * Text input - Input Sources Edit...
+    * Text input - Input Sources --> Edit...
         * Correct spelling --> Disable
         * Capitalize words --> Disable
         * Add period with double space --> Disable
@@ -45,9 +45,11 @@ mac-os-dev-notes
 
 ### Install
 
-1. Chrome
-2. Firefox
-3. Xcode Command-Line Tools (download from developer.apple.com)
+1. Xcode Command-Line Tools
+   1. Search and download from developer.apple.com
+   2. Verify with `xcode-select -p` or `gcc --version`
+2. Chrome
+3. Firefox
 4. Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
 5. [Miniconda](https://conda.io/miniconda.html)
 6. [PyCharm CE](https://www.jetbrains.com/pycharm/)
