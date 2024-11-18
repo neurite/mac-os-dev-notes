@@ -58,7 +58,7 @@ mac-os-dev-notes
 4. Monospaced Fonts
    1. Download Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
    2. Open Font Book, then File - Add Fonts to Current User
-5. [Miniconda](https://conda.io/miniconda.html)
+5. [Miniconda](https://conda.io/miniconda.html), run the script with `bash` not `zsh`
 6. [PyCharm CE](https://www.jetbrains.com/pycharm/)
 7. [Visual Studio Code](https://code.visualstudio.com/), can run locally from `~/Applications`
 
@@ -100,24 +100,53 @@ Visual profile:
 
 ### vim
 
-Run `vim --version` should see "-python3", the target is to add Python 3 support so that "+python3".
+Run `vim --version` and should see "-python3" which means Python3 is not supported. The primary target is to add Python3 support.
 
-Befroe we proceed, make sure the Xcode Command-Line Tools are installed.
+Before we proceed, make sure the Xcode Command-Line Tools are installed. The gcc compiler is required and is included in Xcode Command-Line Tools. We will also use the python installed with Xcode.
 
-The source code of `vim` is checked out into `~/Downloads` and is compiled there. The compiled code is deployed to `~/Applications`. The `vim` in `~/Downloads` is zipped and moved to `~/Packages`. Here are the steps:
+The source code of `vim` is checked out into `~/Downloads` and is compiled there. The compiled code is deployed to `~/Applications`. Here are the detailed steps:
 
 1. `cd ~/Downloads`
 2. `git clone https://github.com/vim/vim.git`
 3. `cd vim`
-4. `./configure --enable-python3interp --disable-netbeans`
-5. `make`
-6. Copy `src/vim` to `~/Applications/vim/bin`
-7. Add it to `$PATH` in `~/.bashrc`
-8. Copy the `~/.vimrc` file
-9. Make a directory `sudo mkdir -p /usr/local/share/vim`
-10. Copy everything system vim there `sudo cp -r /usr/share/vim/vim73/* /usr/local/share/vim/`. Note `vm73` is the version of your vim executable
-11. The file `/usr/local/share/vim/rgb.txt` is needed to show colors. The file can be found [online](https://github.com/vim/vim/blob/master/runtime/rgb.txt). Copy it from the checked out repository `sudo cp Downloads/vim/runtime/rgb.txt /usr/local/share/vim/`
-12. Zip `~/Downloads/vim` and save it in `~/Packages`
+4. Checkout the latest release tag, e.g. `git checkout tags/v9.1.0869`
+5. Compile. See the recipe of commands with flags after the list
+6. Copy the compiled executable `src/vim` to `~/Applications/vim/bin`
+7. Add `${HOME}/Applications/vim/bin` to `$PATH` in `~/.zshrc` (or `~/.bashrc` for older macOS)
+8. Make a directory `sudo mkdir -p /usr/local/share/vim`
+9. Copy everything system vim there `sudo cp -r /usr/share/vim/vim90/* /usr/local/share/vim/`. Note `vim90` is the version of your old vim executable
+10. Copy the `~/.vimrc` file
+
+The following works on macOS 15.1 Sequoia:
+
+```bash
+
+# The script should execute within the checked out vim folder
+
+# Must specify --with-python3-config-dir even though it is deprecated
+# Check output for "if compile and link flags for Python 3 are sane... yes"
+./configure \
+    --enable-multibyte \
+    --disable-gui \
+    --without-x \
+    --enable-terminal \
+    --disable-netbeans \
+    --enable-cscope \
+    --enable-python3interp=yes \
+    --with-python3-command="/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/bin/python3.9" \
+    --with-python3-config-dir="/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/config-3.9-darwin" \
+    --with-python3-stable-abi=3.9
+
+# Without this, make can't locate the headers
+export C_INCLUDE_PATH=/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Headers
+
+make
+
+# At this point, `src/vim` fails with an rpath error
+# The following fixes it
+sudo install_name_tool -add_rpath /Library/Developer/CommandLineTools/Library/Frameworks ./src/vim
+```
+
 
 ### Java
 
