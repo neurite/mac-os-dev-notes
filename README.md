@@ -74,12 +74,28 @@ To disable single-user mode, enter the recovery mode. In the "macOS Utilities" w
 
 ### Terminal
 
-By default the Mac OS terminal is a login shell (`/usr/bin/login`). The login shell executes `~/.bash_profile`. Note that it does not execute `~/.bashrc`. We either use `~/.bash_profile` directly or `source ~/.bashrc` in `~/.bash_profile`. We can also make the terminal a non-login shell (`/bin/bash`).
+By default the Mac OS terminal is a login shell (`/usr/bin/login`). The login shell executes `~/.bash_profile` but does not execute `~/.bashrc`. We should `source ~/.bashrc` in `~/.bash_profile` for consistent behavior across login shells and non-login shells. (We can make the terminal a non-login shell via `/bin/bash`).
+
+The latest macOS terminal is the Z shell (Zsh). The equivalent to `~/.bash_profile` is `~/.zprofile` and to `~/.bashrc` is `~/.zshrc`. A difference here is, in Zsh, `.zshrc` is automatically sourced for all interactive shells including the login shells that are also interactive. Still, on a dev laptop, we source `.zshrc` in `.zprofile` for consistent behavior across all shells.
+
+Lastly, there is the general-purpose `~/.profile`. It is meant to be shell-agnostic. However, Zsh by default does not automatically source `.profile`. We explicitly source it in `.zprofile`.
+
+This is what the `~/.zprofile` looks like:
+
+```
+if [ -r ~/.profile ]; then
+  source ~/.profile
+fi
+
+if [ -r ~/.zshrc ]; then
+  source ~/.zshrc
+fi
+```
 
 Visual profile:
 
 * Background: opacity 85%, blur 0%
-* Font: Source Code Pro 18 pt
+* Font: Source Code Pro 15 pt, 135 columns, 35 rows, on 16" MacBook Pro
 * Text: Antialias
 
 ### vim
