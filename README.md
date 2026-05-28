@@ -18,7 +18,6 @@ mac-os-dev-notes
     * Show scroll bars --> Always
 * Desktop & Dock
     * Dock
-        * Position on screen --> Left
         * Automactically hide and show -- Enable
         * Show suggested and recent apps in dock --> Disable
     * Hot Corners --> Disable all
@@ -34,14 +33,13 @@ mac-os-dev-notes
     * Tap to click
 * Network
     * Firewall --> Enable
-* Siri --> Diable
-* Spotlight --> Only "Applications" and "System Settings"
-* Control Center
+* Apple Intelligence & Siri --> Diable
+* Spotlight --> Results from Apps --> Only "System Settings"
+* Menu Bar
     * Battery --> Show percentage
-    * Digital clock --> 24-hour clock
 * Security & Privacy
     * FileVault --> Enable
-* Finder --> Settings...
+* Finder --> Settings --> Advanced --> Show all filename extensions
 
 ### Install
 
