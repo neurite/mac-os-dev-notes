@@ -1,14 +1,6 @@
 mac-os-dev-notes
 ================
 
-### MacOS Clean Install
-
-1. Prepare [a bootable USB disk of MacOS](https://www.google.com/search?q=bootable+USB+MacOS)
-    1. [Create a bootable installer for MacOS](https://support.apple.com/en-us/HT201372)
-    2. [Download MacOS](https://support.apple.com/en-us/HT211683)
-2. Hold down the Option key when booting up.
-3. Install the OS and then update. Note format the partition as `Mac OS Extended, Journaled`.
-
 ### Customize
 
 * Update macOS first
@@ -64,16 +56,6 @@ mac-os-dev-notes
 5. Monospaced Fonts
    1. Download Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
    2. Open Font Book, then File - Add Fonts to Current User
-
-### Startup Modes
-
-When powering up
-
-* Hold down Command-R for recovery mode.
-* Hold down Command-S for single-user mode.
-* Hold down Command-V for verbose mode.
-
-To disable single-user mode, enter the recovery mode. In the "macOS Utilities" window, choose "Utilities" then "Startup Security Utility", and set a firmware password. *Make sure to never forget the firmware password.*
 
 ### Terminal
 
@@ -150,7 +132,6 @@ make
 sudo install_name_tool -add_rpath /Library/Developer/CommandLineTools/Library/Frameworks ./src/vim
 ```
 
-
 ### Java
 
 1. Download and install [Oracle Java JDK](https://www.oracle.com/technetwork/java/javase/downloads/). Java virtual machines are installed at `/Library/Java/JavaVirtualMachines`.
@@ -182,3 +163,21 @@ sudo install_name_tool -add_rpath /Library/Developer/CommandLineTools/Library/Fr
   ```
 
 5. Download and install Eclipse.
+
+### Startup Modes
+
+When powering up
+
+* Hold down Command-R for recovery mode.
+* Hold down Command-S for single-user mode.
+* Hold down Command-V for verbose mode.
+
+To disable single-user mode, enter the recovery mode. In the "macOS Utilities" window, choose "Utilities" then "Startup Security Utility", and set a firmware password. *Make sure to never forget the firmware password.*
+
+### MacOS Clean Install
+
+1. Prepare [a bootable USB disk of MacOS](https://www.google.com/search?q=bootable+USB+MacOS)
+    1. [Create a bootable installer for MacOS](https://support.apple.com/en-us/HT201372)
+    2. [Download MacOS](https://support.apple.com/en-us/HT211683)
+2. Hold down the Option key when booting up.
+3. Install the OS and then update. Note format the partition as `Mac OS Extended, Journaled`.
