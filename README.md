@@ -46,19 +46,24 @@ mac-os-dev-notes
 1. Xcode Command-Line Tools
    1. Search and download from developer.apple.com
    2. Verify with `xcode-select -p` or `gcc --version`
-2. Chrome
-3. Firefox
+2. Safari
+   1. Private browsing
+   2. Duckduckgo
+   3. UBlockOrigin Lite extension
+3. Chrome
+4. Firefox
    1. Settings...
-   2. Always check default browser --> Disable
-   3. Language and Appearance --> Dark
-   4. Privacy & Security - Passwords - Ask to save passwords --> Disable
-   5. Privacy & Security - Autofill --> Disable
-4. Monospaced Fonts
+   2. General --> Startup --> Always check default browser --> Disable
+   3. General --> Language and Appearance --> Dark
+   4. Privacy & Security --> Enhanced Tracking Protection --> Strict
+   5. Privacy & Security --> Website Privacy Preferences --> Check "... not to sell or share my data"
+   6. Privacy & Security --> Passwords - Ask to save passwords --> Disable
+   7. Privacy & Security --> Autofill --> Disable
+   8. Privacy & Security --> Permissions --> Check "Block new requests to access ..." for each item
+   9. Privacy & Security --> HTTPS-Only Mode --> Enable for all windows
+5. Monospaced Fonts
    1. Download Source Code Pro from [Font Squirrel](http://www.fontsquirrel.com/fonts/list/classification/monospaced)
    2. Open Font Book, then File - Add Fonts to Current User
-5. [Miniconda](https://conda.io/miniconda.html), run the script with `bash` not `zsh`
-6. [PyCharm CE](https://www.jetbrains.com/pycharm/)
-7. [Visual Studio Code](https://code.visualstudio.com/), can run locally from `~/Applications`
 
 ### Startup Modes
 
