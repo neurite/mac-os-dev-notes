@@ -85,7 +85,7 @@ Visual profile:
 
 ### vim
 
-Run `vim --version` and should see "-python3" which means Python3 is not supported. The primary target is to add Python3 support.
+Run `vim --version` and should see "-python3" which means Python3 execution in vim is not supported. Note this is not about syntax highlighting. Even if `-python3`, vim still supports Python3 syntax highlighting. The primary goal here is to add Python3 execution from within vim.
 
 Before we proceed, make sure the Xcode Command-Line Tools are installed. The gcc compiler is required and is included in Xcode Command-Line Tools. We will also use the python installed with Xcode.
 
