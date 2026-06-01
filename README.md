@@ -59,7 +59,7 @@ mac-os-dev-notes
 
 ### Terminal
 
-By default the Mac OS terminal is a login shell (`/usr/bin/login`). The login shell executes `~/.bash_profile` but does not execute `~/.bashrc`. We should `source ~/.bashrc` in `~/.bash_profile` for consistent behavior across login shells and non-login shells. (We can make the terminal a non-login shell via `/bin/bash`).
+For older versions of macOS, the default terminal is a login shell (`/usr/bin/login`). The login shell executes `~/.bash_profile` but does not execute `~/.bashrc`. We should `source ~/.bashrc` in `~/.bash_profile` for consistent behavior across login shells and non-login shells. (We can make the terminal a non-login shell via `/bin/bash`).
 
 The latest macOS terminal is the Z shell (Zsh). The equivalent to `~/.bash_profile` is `~/.zprofile` and to `~/.bashrc` is `~/.zshrc`. A difference here is, in Zsh, `.zshrc` is automatically sourced for all interactive shells including the login shells that are also interactive. Still, on a dev laptop, we source `.zshrc` in `.zprofile` for consistent behavior across all shells.
 
